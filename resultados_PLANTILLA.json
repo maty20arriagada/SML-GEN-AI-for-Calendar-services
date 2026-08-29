@@ -1,0 +1,492 @@
+[
+  {
+    "id": 1,
+    "texto": "Reunión el lunes a las 3pm",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 2,
+    "texto": "Cita el martes 2 de septiembre a las 14:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 3,
+    "texto": "Reunión el 15 de octubre a las 10 de la mañana",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 4,
+    "texto": "Meeting on Friday at 10am",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 5,
+    "texto": "Reunión el jueves 10/09 a las 8:30",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 6,
+    "texto": "Reunión el viernes a las 5pm",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 7,
+    "texto": "Reunión el martes 23 de noviembre a las 16:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 8,
+    "texto": "Appointment on December 5th at 2pm",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 9,
+    "texto": "Reunión con Ana y Pedro el viernes a las 10:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 10,
+    "texto": "Reunión de equipo el miércoles 15/09 a las 9:30 con Juan, María y Carlos",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 11,
+    "texto": "Reunión con el cliente el lunes a las 11am, participan: Roberto, Laura",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 12,
+    "texto": "Reunión con Sofía el martes 8 de septiembre a las 15:30",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 13,
+    "texto": "Reunión de trabajo con Diego, Valentina y Andrés el jueves a las 14:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 14,
+    "texto": "Call with John and Maria on Wednesday at 3pm",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 15,
+    "texto": "Reunión con el equipo de desarrollo el lunes 14/09 a las 9:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 16,
+    "texto": "Reunión la próxima semana por la mañana",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 17,
+    "texto": "Reunión mañana a la tarde",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 18,
+    "texto": "Reunión el mes que viene",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 19,
+    "texto": "Reunión en un rato",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 20,
+    "texto": "Reunión el finde",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 21,
+    "texto": "Reunión a mediados de septiembre",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 22,
+    "texto": "Reunión el lunes que viene a las 10",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 23,
+    "texto": "Reunión de 2 horas el 15/09 a las 9:30 con el equipo de ventas en la sala de conferencias, recordar 30 minutos antes",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 24,
+    "texto": "Reunión con el cliente de Bankard el jueves a las 11am, duración 1 hora, Zoom link: zoom.us/j/123456, zona horaria Argentina",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 25,
+    "texto": "Reunión de standup diario a las 9:15am, 15 minutos, con el equipo de ingeniería en Google Meet",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 26,
+    "texto": "Reunión con Ana, Pedro y María el martes 8/09 de 14:00 a 16:00 en oficina 501, traer presentación, recordar 1 hora antes",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 27,
+    "texto": "Weekly sync with design team, every Wednesday at 2pm, 45 minutes, Zoom",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 28,
+    "texto": "Reunión de revisión de código el viernes 11/09 a las 10:00 con el equipo backend, duración 30 min, sala B2",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 29,
+    "texto": "Reunión",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 30,
+    "texto": "Reunión el 30 de febrero a las 25:00",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 31,
+    "texto": "Reunión con 12345 el lunes a las 3pm",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 32,
+    "texto": "Reunión el lunes a las 3pm y también reunión el martes a las 10am",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 33,
+    "texto": "Agenda una reunión para ayer a las 10am",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 34,
+    "texto": "Reunión con Ana García-Pérez y José María López el miércoles a las 11:30am por 45 minutos en la sala de juntas, recordar 15 minutos antes",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  },
+  {
+    "id": 35,
+    "texto": "Reunión el próximo martes a las 3pm con el equipo, duración aproximada de 1 a 2 horas",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": null
+    }
+  }
+]

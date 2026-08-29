@@ -1,0 +1,142 @@
+========================================
+GUIA DE USO - BENCHMARK DE AGENDAMIENTO
+========================================
+
+ARCHIVOS:
+  benchmark/frases.json              -> 35 frases con ground truth
+  benchmark/evaluar.py               -> Script de evaluacion
+  benchmark/resultados_PLANTILLA.json -> Plantilla para completar
+
+
+PASO 1: GENERAR PLANTILLA
+--------------------------
+  Ejecutar en tu terminal:
+    python benchmark/evaluar.py --generar
+
+  Esto crea resultados_PLANTILLA.json con las 35 frases vacias.
+
+
+PASO 2: GENERAR SALIDAS DEL MODELO (en Google Colab)
+------------------------------------------------------
+  1. Abrir Google Colab (colab.research.google.com)
+  2. Activar GPU: Runtime -> Change runtime type -> T4 GPU
+  3. Subir frases.json al Colab
+  4. Ejecutar este codigo:
+
+     from google.colab import drive
+     drive.mount('/content/drive')
+
+     import json
+     from transformers import AutoTokenizer, AutoModelForCausalLM
+     import torch
+
+     # Cargar modelo (elegir uno)
+     # Opcion A: TinyLlama (1.1B, rapido)
+     modelo_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+     # Opcion B: Phi-2 (2.7B, mejor calidad)
+     # modelo_id = "microsoft/phi-2"
+
+     # Opcion C: Mistral-7B (mejor pero mas pesado)
+     # modelo_id = "mistralai/Mistral-7B-Instruct-v0.2"
+
+     tokenizer = AutoTokenizer.from_pretrained(modelo_id)
+     model = AutoModelForCausalLM.from_pretrained(
+         modelo_id,
+         torch_dtype=torch.float16,
+         device_map="auto"
+     )
+
+     # Cargar benchmark
+     with open("frases.json", "r") as f:
+         benchmark = json.load(f)
+
+     resultados = []
+
+     for frase in benchmark["frases"]:
+         prompt = f"""Dada la siguiente frase sobre una reunion, extrae los campos en formato JSON:
+     - titulo
+     - fecha (formato YYYY-MM-DD, null si no especifica)
+     - hora_inicio (formato HH:MM 24h, null si no especifica)
+     - duracion_minutos (numero, null si no especifica)
+     - participantes (lista de nombres, [] si no especifica)
+     - ubicacion (string, null si no especifica)
+     - recordatorio_minutos (numero, null si no especifica)
+     - zona_horaria (string, America/Santiago por defecto)
+
+     Frase: "{frase['texto']}"
+
+     Responde SOLO con el JSON, sin texto adicional:"""
+
+         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+         outputs = model.generate(**inputs, max_new_tokens=256, temperature=0.1)
+         respuesta = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+         # Extraer solo el JSON de la respuesta
+         import re
+         json_match = re.search(r'\{.*\}', respuesta, re.DOTALL)
+         if json_match:
+             try:
+                 json_salida = json.loads(json_match.group())
+             except:
+                 json_salida = {"error": "JSON invalido"}
+         else:
+             json_salida = {"error": "No se detecto JSON"}
+
+         resultados.append({
+             "id": frase["id"],
+             "texto": frase["texto"],
+             "resultado_modelo": json_salida
+         })
+
+         print(f"Frase {frase['id']}: {'OK' if 'error' not in json_salida else 'ERROR'}")
+
+     # Guardar resultados
+     with open("resultados_tinyllama.json", "w") as f:
+     # Cambiar "tinyllama" por el nombre del modelo usado
+         json.dump(resultados, f, indent=2, ensure_ascii=False)
+
+     print("Resultados guardados en resultados_tinyllama.json")
+
+  5. Descargar resultados_{nombre_modelo}.json a tu PC
+
+
+PASO 3: EVALUAR UN MODELO
+---------------------------
+  Copiar el archivo resultados_{modelo}.json a benchmark/
+  Ejecutar:
+    python benchmark/evaluar.py --evaluar tinyllama
+
+  Sustituir "tinyllama" por el nombre del modelo.
+
+  Ejemplo:
+    python benchmark/evaluar.py --evaluar phi2
+    python benchmark/evaluar.py --evaluar mistral7b
+
+
+PASO 4: COMPARAR MODELOS
+--------------------------
+  Tener los 3 archivos de resultados en benchmark/
+  Ejecutar:
+    python benchmark/evaluar.py --comparar tinyllama phi2 mistral7b
+
+
+QUE MIDE EL REPORTE
+---------------------
+  - Precision total:    % de frases con TODOS los campos correctos
+  - Precision por categoria: simple, con_participantes, ambigua, compleja, edge_case
+  - Precision por campo: titulo, fecha, hora_inicio, participantes, etc.
+  - Tipos de error:
+      omision:         falto un campo que debia estar
+      inventado:       el modelo invento un dato no mencionado
+      valor_incorrecto: el campo existe pero con valor equivocado
+      formato_incorrecto: el formato no es el esperado
+
+
+ORDEN RECOMENDADO
+-------------------
+  1. Empezar con TinyLlama (1.1B) -> rapido, consume poco
+  2. Probar Phi-2 (2.7B) -> mejor calidad
+  3. Probar Mistral-7B (7B) -> mejor pero mas lento
+  4. Comparar los 3 y documentar resultados
+  5. Elegir el mejor balance precision/tamaño

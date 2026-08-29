@@ -1,0 +1,609 @@
+[
+  {
+    "id": 1,
+    "texto": "Reunión el lunes a las 3pm",
+    "resultado_modelo": {
+      "titulo": "Reunión del lunes a las 3pm",
+      "fecha": "2021-06-14",
+      "hora_inicio": "15:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "<NAME>",
+        "<|user|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 2,
+    "texto": "Cita el martes 2 de septiembre a las 14:00",
+    "resultado_modelo": {
+      "titulo": "Cita del martes 2 de septiembre a las 14:00",
+      "fecha": "2021-09-02",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "<NAME>",
+        "<|user|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 3,
+    "texto": "Reunión el 15 de octubre a las 10 de la mañana",
+    "resultado_modelo": {
+      "titulo": "Reunión del 15 de octubre a las 10 de la mañana",
+      "fecha": "2021-10-15",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 4,
+    "texto": "Meeting on Friday at 10am",
+    "resultado_modelo": {
+      "titulo": "Meeting on Friday at 10am",
+      "fecha": "2021-09-24",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 5,
+    "texto": "Reunión el jueves 10/09 a las 8:30",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "10/09/2021",
+      "hora_inicio": "10:30",
+      "duracion_minutos": 30,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": "Santiago",
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 6,
+    "texto": "Reunión el viernes a las 5pm",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2021-04-23",
+      "hora_inicio": "16:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": "Santiago, Chile",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 7,
+    "texto": "Reunión el martes 23 de noviembre a las 16:00",
+    "resultado_modelo": {
+      "titulo": "Reunión del martes 23 de noviembre a las 16:00",
+      "fecha": "2021-11-23",
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 8,
+    "texto": "Appointment on December 5th at 2pm",
+    "resultado_modelo": {
+      "titulo": "Appointment on December 5th at 2pm",
+      "fecha": "2021-12-05",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "John Doe",
+        "Jane Smith"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 9,
+    "texto": "Reunión con Ana y Pedro el viernes a las 10:00",
+    "resultado_modelo": {
+      "titulo": "Reunión con Ana y Pedro",
+      "fecha": "2021-04-16",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Ana",
+        "Pedro"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 10,
+    "texto": "Reunión de equipo el miércoles 15/09 a las 9:30 con Juan, María y Carlos",
+    "resultado_modelo": {
+      "titulo": "Reunión de equipo",
+      "fecha": "15/09/2021",
+      "hora_inicio": "10:30",
+      "duracion_minutos": 15,
+      "participantes": [
+        "Juan",
+        "María",
+        "Carlos"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 11,
+    "texto": "Reunión con el cliente el lunes a las 11am, participan: Roberto, Laura",
+    "resultado_modelo": {
+      "titulo": "Reunión con el cliente",
+      "fecha": "2021-02-01 11:00:00",
+      "hora_inicio": "11:00:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "Roberto",
+        "Laura"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 12,
+    "texto": "Reunión con Sofía el martes 8 de septiembre a las 15:30",
+    "resultado_modelo": {
+      "titulo": "Reunión con Sofía el martes 8 de septiembre a las 15:30",
+      "fecha": "2021-09-08",
+      "hora_inicio": "15:30",
+      "duracion_minutos": null,
+      "participantes": [
+        "Sofía"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 13,
+    "texto": "Reunión de trabajo con Diego, Valentina y Andrés el jueves a las 14:00",
+    "resultado_modelo": {
+      "titulo": "Reunión de trabajo",
+      "fecha": "2021-03-18",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Diego",
+        "Valentina",
+        "Andrés"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 14,
+    "texto": "Call with John and Maria on Wednesday at 3pm",
+    "resultado_modelo": {
+      "titulo": "Reunión con John y Maria",
+      "fecha": "2021-02-17",
+      "hora_inicio": "15:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "John",
+        "Maria"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 15,
+    "texto": "Reunión con el equipo de desarrollo el lunes 14/09 a las 9:00",
+    "resultado_modelo": {
+      "titulo": "Reunión con el equipo de desarrollo",
+      "fecha": "14/09/2021",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 16,
+    "texto": "Reunión la próxima semana por la mañana",
+    "resultado_modelo": {
+      "titulo": "Reunión la próxima semana por la mañana",
+      "fecha": "2021-09-21",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 1,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": "Santiago",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 17,
+    "texto": "Reunión mañana a la tarde",
+    "resultado_modelo": {
+      "titulo": "Reunión mañana a la tarde",
+      "fecha": "2021-02-01 12:00:00",
+      "hora_inicio": "12:00:00",
+      "duracion_minutos": 1,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": "Santiago",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 18,
+    "texto": "Reunión el mes que viene",
+    "resultado_modelo": {
+      "titulo": "Reunión el mes que viene",
+      "fecha": "2021-09-25",
+      "hora_inicio": "18:00",
+      "duracion_minutos": 120,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 60,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 19,
+    "texto": "Reunión en un rato",
+    "resultado_modelo": {
+      "titulo": "Reunión en un rato",
+      "fecha": "2021-01-01",
+      "hora_inicio": "12:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 20,
+    "texto": "Reunión el finde",
+    "resultado_modelo": {
+      "titulo": "Reunión del finde",
+      "fecha": "2021-12-31 19:00",
+      "hora_inicio": "19:00",
+      "duracion_minutos": 30,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": "Santiago, Chile",
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 21,
+    "texto": "Reunión a mediados de septiembre",
+    "resultado_modelo": {
+      "titulo": "Reunión a mediados de septiembre",
+      "fecha": "2021-09-15",
+      "hora_inicio": "18:00",
+      "duracion_minutos": 120,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 60,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 22,
+    "texto": "Reunión el lunes que viene a las 10",
+    "resultado_modelo": {
+      "titulo": "Reunión del lunes que viene a las 10",
+      "fecha": "2021-02-01",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 60,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": "Santiago",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 23,
+    "texto": "Reunión de 2 horas el 15/09 a las 9:30 con el equipo de ventas en la sala de conferencias, recordar 30 minutos antes",
+    "resultado_modelo": {
+      "titulo": "Reunión de 2 horas",
+      "fecha": "15/09/2021",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 2,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 24,
+    "texto": "Reunión con el cliente de Bankard el jueves a las 11am, duración 1 hora, Zoom link: zoom.us/j/123456, zona horaria Argentina",
+    "resultado_modelo": {
+      "titulo": "Reunión con el cliente de Bankard",
+      "fecha": "2021-03-18 11:00:00",
+      "hora_inicio": "11:00:00",
+      "duracion_minutos": 1,
+      "participantes": [
+        "<NAME>",
+        "<|user|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 25,
+    "texto": "Reunión de standup diario a las 9:15am, 15 minutos, con el equipo de ingeniería en Google Meet",
+    "resultado_modelo": {
+      "titulo": "Reunión de standup diario a las 9:15am, 15 minutos, con el equipo de ingeniería en Google Meet",
+      "fecha": "2021-01-11",
+      "hora_inicio": "15:15",
+      "duracion_minutos": 15,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 26,
+    "texto": "Reunión con Ana, Pedro y María el martes 8/09 de 14:00 a 16:00 en oficina 501, traer presentación, recordar 1 hora antes",
+    "resultado_modelo": {
+      "titulo": "Reunión con Ana, Pedro y María",
+      "fecha": "8/09/2021",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Ana",
+        "Pedro",
+        "María"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 27,
+    "texto": "Weekly sync with design team, every Wednesday at 2pm, 45 minutes, Zoom",
+    "resultado_modelo": {
+      "titulo": "Weekly sync with design team",
+      "fecha": "2021-06-16",
+      "hora_inicio": "14:00",
+      "duracion_minutos": 45,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 28,
+    "texto": "Reunión de revisión de código el viernes 11/09 a las 10:00 con el equipo backend, duración 30 min, sala B2",
+    "resultado_modelo": {
+      "titulo": "Reunión de revisión de código",
+      "fecha": "11/09/2021",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 30,
+      "participantes": [
+        "<NAME>",
+        "<|user|>",
+        "<|assistant|>"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 29,
+    "texto": "Reunión",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 30,
+    "texto": "Reunión el 30 de febrero a las 25:00",
+    "resultado_modelo": {
+      "titulo": "Reunión del 30 de febrero a las 25:00",
+      "fecha": "2021-02-20",
+      "hora_inicio": "18:00",
+      "duracion_minutos": 30,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 31,
+    "texto": "Reunión con 12345 el lunes a las 3pm",
+    "resultado_modelo": {
+      "titulo": "Reunión con 12345 el lunes a las 3pm",
+      "fecha": "2021-06-01 15:00:00",
+      "hora_inicio": "15:00:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "John Doe",
+        "Jane Smith"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 32,
+    "texto": "Reunión el lunes a las 3pm y también reunión el martes a las 10am",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2021-02-01 12:00:00",
+      "hora_inicio": "12:00:00",
+      "duracion_minutos": 15,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 33,
+    "texto": "Agenda una reunión para ayer a las 10am",
+    "resultado_modelo": {
+      "titulo": "Agenda una reunión para ayer a las 10am",
+      "fecha": "2021-09-28",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 34,
+    "texto": "Reunión con Ana García-Pérez y José María López el miércoles a las 11:30am por 45 minutos en la sala de juntas, recordar 15 minutos antes",
+    "resultado_modelo": {
+      "titulo": "Reunión con Ana García-Pérez y José María López",
+      "fecha": "miércoles a las 11:30am",
+      "hora_inicio": "11:30am",
+      "duracion_minutos": 45,
+      "participantes": [
+        "Ana García-Pérez",
+        "José María López"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago"
+    }
+  },
+  {
+    "id": 35,
+    "texto": "Reunión el próximo martes a las 3pm con el equipo, duración aproximada de 1 a 2 horas",
+    "resultado_modelo": {
+      "titulo": "Reunión del equipo",
+      "fecha": "2021-03-18",
+      "hora_inicio": "15:00",
+      "duracion_minutos": 1,
+      "participantes": [
+        "Juan",
+        "Maria",
+        "José"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago"
+    }
+  }
+]
