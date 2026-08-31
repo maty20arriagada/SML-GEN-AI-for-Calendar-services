@@ -1,0 +1,438 @@
+{
+  "metadata": {
+    "task": "Agendado en calendario desde lenguaje natural (ES)",
+    "team": "AGENDA — Pablo Silva, Matías Arriagada, Daniela, Cristian Cárdenas",
+    "timezone": "America/Santiago",
+    "now_default": "2026-08-31T14:00:00-04:00",
+    "now_human": "Lunes 31 de agosto de 2026, 14:00 CLT",
+    "description": "20 utterances ES (10 simples + 10 trampas) con now fijo y calendar_context. Gold JSON usa offset -04:00 (CLT invierno). Métrica: JSON-validity + Exact-Match temporal + Conflict-F1.",
+    "schema": "Array[Event] { title:str, start:ISO8601, end:ISO8601, attendees:[str], location:str|null, rrule:str|null, conflict:bool }",
+    "notes": "Santiago DST 2026: -04:00 en agosto/septiembre (CLT). Se usa -04:00 consistente para todo el dataset."
+  },
+  "examples": [
+    {
+      "id": 1,
+      "tag": "simple",
+      "utterance": "Agéndame reunión con Ana mañana a las 3pm por 1 hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Reunión con Ana",
+          "start": "2026-09-01T15:00:00-04:00",
+          "end": "2026-09-01T16:00:00-04:00",
+          "attendees": ["Ana"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja",
+      "failure_mode_if_wrong": "Temporal: mañana=2026-09-01, no 2026-09-02; hora PM"
+    },
+    {
+      "id": 2,
+      "tag": "simple",
+      "utterance": "Agenda cita con el dentista el viernes a las 10am por 2 horas",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Cita con dentista",
+          "start": "2026-09-04T10:00:00-04:00",
+          "end": "2026-09-04T12:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 3,
+      "tag": "simple",
+      "utterance": "Cena con mis padres el miércoles a las 20:00 por 2 horas",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Cena con padres",
+          "start": "2026-09-02T20:00:00-04:00",
+          "end": "2026-09-02T22:00:00-04:00",
+          "attendees": ["Padres"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 4,
+      "tag": "simple",
+      "utterance": "Reunión de proyecto el jueves a las 14:30 por 45 minutos en sala 302",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Reunión de proyecto",
+          "start": "2026-09-03T14:30:00-04:00",
+          "end": "2026-09-03T15:15:00-04:00",
+          "attendees": [],
+          "location": "sala 302",
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 5,
+      "tag": "simple",
+      "utterance": "Bloquea mañana de 9 a 11 para estudio personal",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Estudio personal",
+          "start": "2026-09-01T09:00:00-04:00",
+          "end": "2026-09-01T11:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 6,
+      "tag": "simple",
+      "utterance": "Agéndame llamada con cliente el 5 de septiembre a las 11am por 30 minutos",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Llamada con cliente",
+          "start": "2026-09-05T11:00:00-04:00",
+          "end": "2026-09-05T11:30:00-04:00",
+          "attendees": ["Cliente"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 7,
+      "tag": "simple",
+      "utterance": "Recordatorio: ir al gimnasio pasado mañana a las 7am por 1 hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Gimnasio",
+          "start": "2026-09-02T07:00:00-04:00",
+          "end": "2026-09-02T08:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "media",
+      "failure_mode_if_wrong": "pasado mañana desde lunes = miércoles 2026-09-02"
+    },
+    {
+      "id": 8,
+      "tag": "simple",
+      "utterance": "Agéndame entrega de informe el lunes 7 de septiembre a las 9am",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Entrega de informe",
+          "start": "2026-09-07T09:00:00-04:00",
+          "end": "2026-09-07T10:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 9,
+      "tag": "simple",
+      "utterance": "Café con Daniela el martes a las 16:00 por 45 minutos en café Central",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Café con Daniela",
+          "start": "2026-09-01T16:00:00-04:00",
+          "end": "2026-09-01T16:45:00-04:00",
+          "attendees": ["Daniela"],
+          "location": "café Central",
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 10,
+      "tag": "simple",
+      "utterance": "Agéndame tutoría con profesor el miércoles 2 de septiembre a las 10am por 1 hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Tutoría con profesor",
+          "start": "2026-09-02T10:00:00-04:00",
+          "end": "2026-09-02T11:00:00-04:00",
+          "attendees": ["Profesor"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "baja"
+    },
+    {
+      "id": 11,
+      "tag": "trampa_temporal",
+      "utterance": "Agéndame reunión con Ana el próximo martes a las 3pm por 1h, avísame si choca con mi clase de 8 a 10",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [
+        {
+          "title": "Clase Ingeniería",
+          "start": "2026-09-01T08:00:00-04:00",
+          "end": "2026-09-01T10:00:00-04:00"
+        }
+      ],
+      "expected_output": [
+        {
+          "title": "Reunión con Ana",
+          "start": "2026-09-01T15:00:00-04:00",
+          "end": "2026-09-01T16:00:00-04:00",
+          "attendees": ["Ana"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Falla típica: próximo martes desde lunes = 2026-09-01, no 2026-09-08 (+7 días). Modelo lo falla 40%."
+    },
+    {
+      "id": 12,
+      "tag": "trampa_conflicto",
+      "utterance": "Agenda reunión de equipo el martes a las 9am por 1 hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [
+        {
+          "title": "Clase Cálculo",
+          "start": "2026-09-01T08:00:00-04:00",
+          "end": "2026-09-01T10:00:00-04:00"
+        }
+      ],
+      "expected_output": [
+        {
+          "title": "Reunión de equipo",
+          "start": "2026-09-01T09:00:00-04:00",
+          "end": "2026-09-01T10:00:00-04:00",
+          "attendees": ["Equipo"],
+          "location": null,
+          "rrule": null,
+          "conflict": true
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Debe marcar conflict=true por solapamiento 09:00-10:00 con clase 08:00-10:00. SLM lo omite."
+    },
+    {
+      "id": 13,
+      "tag": "trampa_recorrencia",
+      "utterance": "Clase de yoga cada martes a las 7am por 1 hora, empezando el próximo martes",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Clase de yoga",
+          "start": "2026-09-01T07:00:00-04:00",
+          "end": "2026-09-01T08:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": "FREQ=WEEKLY;BYDAY=TU",
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Falla: genera evento único sin rrule o rrule malformada (FREQ=WEEKLY)"
+    },
+    {
+      "id": 14,
+      "tag": "trampa_ambigua",
+      "utterance": "Agéndame llamada con Cristian a las 8 por 30 minutos mañana",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Llamada con Cristian",
+          "start": "2026-09-01T08:00:00-04:00",
+          "end": "2026-09-01T08:30:00-04:00",
+          "attendees": ["Cristian"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Hora ambigua 'a las 8' debe inferirse 08:00 AM por contexto mañana. Modelo pone 20:00 o 08:00 sin AM/PM."
+    },
+    {
+      "id": 15,
+      "tag": "trampa_relativa",
+      "utterance": "Reunión en dos semanas el lunes a las 11am por 1 hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Reunión",
+          "start": "2026-09-14T11:00:00-04:00",
+          "end": "2026-09-14T12:00:00-04:00",
+          "attendees": [],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "en dos semanas desde 31 ago = 14 sep (lunes). Modelo suele dar 07 sep."
+    },
+    {
+      "id": 16,
+      "tag": "trampa_multi_evento",
+      "utterance": "Agéndame dos reuniones: con Pablo el martes a las 10am y con Matías el mismo martes a las 15:00, ambas de 1h",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Reunión con Pablo",
+          "start": "2026-09-01T10:00:00-04:00",
+          "end": "2026-09-01T11:00:00-04:00",
+          "attendees": ["Pablo"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        },
+        {
+          "title": "Reunión con Matías",
+          "start": "2026-09-01T15:00:00-04:00",
+          "end": "2026-09-01T16:00:00-04:00",
+          "attendees": ["Matías"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Falla: genera solo 1 evento o confunde horarios/attendees"
+    },
+    {
+      "id": 17,
+      "tag": "trampa_rango",
+      "utterance": "Reserva sala para workshop del 2 al 4 de septiembre, todo el día",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Workshop",
+          "start": "2026-09-02T00:00:00-04:00",
+          "end": "2026-09-04T23:59:59-04:00",
+          "attendees": [],
+          "location": "sala",
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Falla: pone solo fecha inicio o formato sin rango"
+    },
+    {
+      "id": 18,
+      "tag": "trampa_coloquial",
+      "utterance": "Junta con Daniela pasado mañana a las ocho de la mañana por una hora",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Junta con Daniela",
+          "start": "2026-09-02T08:00:00-04:00",
+          "end": "2026-09-02T09:00:00-04:00",
+          "attendees": ["Daniela"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "media",
+      "failure_mode_if_wrong": "pasado mañana lunes-> miércoles 02 sep. Coloquial + 'ocho' textual confunde."
+    },
+    {
+      "id": 19,
+      "tag": "trampa_conflicto_parcial",
+      "utterance": "Agéndame revisión con Cristian el martes de 9:30 a 10:30",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [
+        {
+          "title": "Clase",
+          "start": "2026-09-01T08:00:00-04:00",
+          "end": "2026-09-01T10:00:00-04:00"
+        },
+        {
+          "title": "Almuerzo",
+          "start": "2026-09-01T12:00:00-04:00",
+          "end": "2026-09-01T13:00:00-04:00"
+        }
+      ],
+      "expected_output": [
+        {
+          "title": "Revisión con Cristian",
+          "start": "2026-09-01T09:30:00-04:00",
+          "end": "2026-09-01T10:30:00-04:00",
+          "attendees": ["Cristian"],
+          "location": null,
+          "rrule": null,
+          "conflict": true
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Solapamiento parcial 09:30-10:00 debe detectarse. Modelo dice conflict=false."
+    },
+    {
+      "id": 20,
+      "tag": "trampa_timezone",
+      "utterance": "Agéndame call con equipo remoto el viernes a las 15:00 hora Santiago por 1h",
+      "now": "2026-08-31T14:00:00-04:00",
+      "calendar_context": [],
+      "expected_output": [
+        {
+          "title": "Call con equipo remoto",
+          "start": "2026-09-04T15:00:00-04:00",
+          "end": "2026-09-04T16:00:00-04:00",
+          "attendees": ["Equipo remoto"],
+          "location": null,
+          "rrule": null,
+          "conflict": false
+        }
+      ],
+      "difficulty": "alta",
+      "failure_mode_if_wrong": "Debe preservar -04:00 America/Santiago, no convertir a UTC ni omitir offset."
+    }
+  ]
+}
