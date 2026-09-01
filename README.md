@@ -28,16 +28,14 @@ Las fechas relativas se interpretan desde el 1 de septiembre de 2026.
 
 ## Archivos principales
 
-- `frases.json`: Benchmark1 con ground truth.
-- `frases (1).json`: Benchmark2 con ground truth.
+- `deliverable1.tex`: entrega formal (1 página, compilar con pdflatex).
+- `frases.json`: Benchmark1 con ground truth (35 frases).
+- `frases (1).json`: Benchmark2 con ground truth (45 frases).
 - `prueba_d1.ipynb`: baseline con TinyLlama y Qwen2.
 - `prueba_d2.ipynb`: prompting mejorado y evaluación de Qwen3.
-- `resultados_qwen_mejorado.json`: salidas normalizadas de Qwen3 en Benchmark2.
 - `reporte_tinyllama.csv`: resultados detallados de TinyLlama en Benchmark2.
 - `reporte_mistral7B.csv`: resultados detallados de Mistral-7B en Benchmark2.
 - `reporte_qwen4B.csv`: resultados detallados de Qwen4B en Benchmark2.
-- `deliverable1.tex` / `deliverable1.pdf`: entrega formal (1 página).
-- `logo_dii.png`: logo del Departamento de Ingeniería Industrial.
 - `evaluar.py`: métricas globales, por campo, por categoría y tipo de error.
 
 ## Ejecución
