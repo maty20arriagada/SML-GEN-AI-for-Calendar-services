@@ -1,0 +1,102 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=0.43in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+\definecolor{navy}{HTML}{173B57}
+\definecolor{teal}{HTML}{087E8B}
+\definecolor{pale}{HTML}{EEF7F8}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal}
+\setlength{\parskip}{0.08em}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.04}
+\titlespacing*{\section}{0pt}{0.45ex}{0.12ex}
+\titleformat{\section}{\color{navy}\bfseries\normalsize}{}{0pt}{}
+\setlist{nosep,leftmargin=1.25em,itemsep=0pt,topsep=0pt,partopsep=0pt,parsep=0pt}
+
+\begin{document}
+\small
+
+\begin{center}
+\includegraphics[height=1.1cm]{logo_dii}\\[0.15em]
+{\color{navy}\Large\bfseries Agendamiento estructurado de reuniones desde lenguaje natural}\\[-0.05em]
+{\scriptsize Generative Artificial Intelligence (580694) -- Universidad de Concepci\'on -- Spring 2026}\\[-0.05em]
+{\scriptsize Matias Arriagada \;|\; Cristi\'an C\'ardenas \;|\; Pablo Silva \;|\; Daniela Vidal}\\[-0.15em]
+{\color{teal}\rule{\textwidth}{0.9pt}}
+\end{center}
+
+\section*{1. Tarea y criterio de \textit{\'exito}}
+Convertir mensajes naturales (espa\~nol/ingl\'es, incluidos mensajes informales) en un evento JSON listo para una API de calendario. El contrato exige ocho campos: \texttt{titulo}, \texttt{fecha} (YYYY-MM-DD), \texttt{hora\_inicio} (HH:MM), \texttt{duracion\_minutos}, \texttt{participantes}, \texttt{ubicacion}, \texttt{recordatorio\_minutos} y \texttt{zona\_horaria}. \textbf{Correcto} significa: todos los valores coinciden con el ground truth; se conservan los datos mencionados, se usa \texttt{null}/\texttt{[]} cuando falta informaci\'on y no se inventan valores. Las fechas relativas se calculan desde el 1-09-2026 (martes). Benchmark2 contiene 45 frases en seis categor\'ias: simple, con participantes, ambigua, compleja, edge case y chat.
+
+\section*{2. Diagn\'ostico basado en evidencia}
+Evaluamos cuatro modelos en Benchmark2 (45 frases, mismo conjunto), m\'as un baseline adicional en Benchmark1 (35 frases):
+
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}l c c@{}}
+\toprule
+\textbf{Modelo} & \textbf{Exactitud} & \textbf{Configuraci\'on} \\
+\midrule
+TinyLlama-1.1B & 6/45 (13.3\%) & Prompt directo \\
+Qwen2-0.5B & 0/35 (0.0\%) & Prompt directo (Benchmark1) \\
+Qwen4B-Instruct & 20/45 (44.4\%) & Prompt directo \\
+Mistral-7B-Instruct & 27/45 (60.0\%) & Prompt directo \\
+\rowcolor{pale}
+Qwen3-4B-Instruct-2507 & \textbf{29/45 (64.4\%)} & System prompt + few-shot + post-proc. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+El patr\'on es claro: los modelos peque\~nos (1--2B) fallan en formato y referencia temporal; los medianos (4--7B) mejoran sustancialmente; la combinaci\'on de instrucciones estructuradas y post-procesamiento determinista supera el prompting directo.
+
+\textbf{M\'etricas por campo (Benchmark2):}
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}lcc@{\quad}lcc@{}}
+\toprule
+Campo & TinyLlama & Mistral7B & Campo & TinyLlama & Mistral7B \\
+\midrule
+\texttt{titulo} & 42.2\% & 84.4\% & \texttt{fecha} & 53.3\% & 93.3\% \\
+\texttt{hora\_inicio} & 57.8\% & 95.6\% & \texttt{duracion} & 62.2\% & 97.8\% \\
+\texttt{participantes} & 55.6\% & 82.2\% & \texttt{ubicacion} & 62.2\% & 91.1\% \\
+\texttt{recordatorio} & 73.3\% & 97.8\% & \texttt{zona\_horaria} & 73.3\% & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Qwen4B obtuvo 44.4\% con prompting directo; Mistral-7B logra 60.0\% (misma configuraci\'on); Qwen3 con pipeline mejorado alcanza 64.4\%. Los errores dominantes en TinyLlama son \texttt{ERROR\_MODELO} (salida inv\'alida) y fechas relativas incorrectas; Mistral falla principalmente en participantes (82.2\%) y t\'itulo (84.4\%).
+
+\textbf{Qwen3 pipeline mejorado por campo:} titulo 82.2\%, fecha 82.2\%, hora\_inicio 100.0\%, duracion 100.0\%, participantes 93.3\%, ubicacion 100.0\%, recordatorio 100.0\%, zona\_horaria 100.0\%. Por categor\'ia: simple 87.5\%, con participantes 71.4\%, ambigua 42.9\%, compleja 71.4\%, edge case 75.0\%, chat 37.5\%.
+
+\section*{3. Modelos candidatos open-weight ($\leq$8B)}
+\begin{center}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.55cm} c c X@{}}
+\toprule
+\textbf{Modelo} & \textbf{Params} & \textbf{VRAM} & \textbf{Raz\'on para esta tarea} \\
+\midrule
+TinyLlama-1.1B & 1.1B & $\sim$2GB & Baseline de bajo costo: 13.3\% en Benchmark2; viable en CPU. \\
+Qwen4B-Instruct & 4B & $\sim$8GB & Referencia intermedia: 44.4\% sin post-procesamiento. \\
+Mistral-7B-Instruct & 7B & $\sim$5GB (4-bit) & Mayor capacidad sin fine-tuning: 60.0\%; buen razonamiento temporal. \\
+\rowcolor{pale}
+Qwen3-4B-Instruct-2507 & 4B & $\sim$8--10GB & Mejor resultado: 64.4\% con instrucciones, few-shot y normalizaci\'on. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{4. Factibilidad de ejecuci\'on}
+\textbf{Entorno comprobado:} Google Colab gratuito con GPU NVIDIA T4 (16GB). \textbf{Stack:} PyTorch, Transformers, bitsandbytes. TinyLlama y Qwen4B caben en CPU; Mistral cuantizado (4-bit) y Qwen3 en FP16 caben en T4. \texttt{evaluar.py} calcula exactitud global, por campo/categor\'ia y tipos de error; el notebook valida JSON, esquema y benchmark antes de ejecutar.
+
+\section*{5. Repositorio y estado}
+\href{https://github.com/maty20arriagada/SML-GEN-AI-for-Calendar-services}{\texttt{github.com/maty20arriagada/SML-GEN-AI-for-Calendar-services}}\\[-0.1em]
+Incluye equipo, especificaci\'on de tarea, Benchmark2 con ground truth, \texttt{evaluar.py}, notebooks (baseline y Qwen3 mejorado), reportes CSV de los cuatro modelos, resultados normalizados y gu\'ia de ejecuci\'on.
+
+\end{document}
