@@ -1,0 +1,693 @@
+{
+  "metadata": {
+    "descripcion": "Benchmark de frases para evaluar parsing de eventos de calendario desde lenguaje natural (set Benchmark2, incluye mensajes estilo chat WhatsApp/Telegram)",
+    "fecha_referencia": "2026-09-01",
+    "dia_referencia": "martes",
+    "total_frases": 45,
+    "categorias": {
+      "simple": "Fechas absolutas, sin participantes, campos basicos",
+      "con_participantes": "Incluye personas explicitas",
+      "ambigua": "Expresiones temporales relativas (manana, pasado manana, proxima semana, etc.)",
+      "compleja": "Multiples campos, detalles especificos",
+      "edge_case": "Casos borde: info faltante, formato raro, idioma ingles, zona horaria distinta",
+      "chat": "Mensajes informales estilo WhatsApp/Telegram"
+    }
+  },
+  "frases": [
+    {
+      "id": 1,
+      "categoria": "simple",
+      "texto": "Reunión el 4 de septiembre a las 9 am",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-04",
+        "hora_inicio": "09:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 2,
+      "categoria": "simple",
+      "texto": "Cita médica el 15 de septiembre a las 10:30",
+      "ground_truth": {
+        "titulo": "Cita médica",
+        "fecha": "2026-09-15",
+        "hora_inicio": "10:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 3,
+      "categoria": "simple",
+      "texto": "Junta el 7 de septiembre a las 16:00",
+      "ground_truth": {
+        "titulo": "Junta",
+        "fecha": "2026-09-07",
+        "hora_inicio": "16:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 4,
+      "categoria": "simple",
+      "texto": "Meeting on September 8th at 2pm",
+      "ground_truth": {
+        "titulo": "Meeting",
+        "fecha": "2026-09-08",
+        "hora_inicio": "14:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 5,
+      "categoria": "simple",
+      "texto": "Entrevista el 10/09 a las 11:15",
+      "ground_truth": {
+        "titulo": "Entrevista",
+        "fecha": "2026-09-10",
+        "hora_inicio": "11:15",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 6,
+      "categoria": "simple",
+      "texto": "Taller el sábado 12 de septiembre a las 3 de la tarde",
+      "ground_truth": {
+        "titulo": "Taller",
+        "fecha": "2026-09-12",
+        "hora_inicio": "15:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 7,
+      "categoria": "simple",
+      "texto": "Presentación el 3 de septiembre a las 8:00",
+      "ground_truth": {
+        "titulo": "Presentación",
+        "fecha": "2026-09-03",
+        "hora_inicio": "08:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 8,
+      "categoria": "simple",
+      "texto": "Sesión de fotos el 11 de septiembre a las 17:30",
+      "ground_truth": {
+        "titulo": "Sesión de fotos",
+        "fecha": "2026-09-11",
+        "hora_inicio": "17:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 9,
+      "categoria": "con_participantes",
+      "texto": "Reunión con Ana y Pedro el 2 de septiembre a las 10",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-02",
+        "hora_inicio": "10:00",
+        "duracion_minutos": null,
+        "participantes": ["Ana", "Pedro"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 10,
+      "categoria": "con_participantes",
+      "texto": "Junta con el equipo de ventas el jueves 10 de septiembre a las 15:30",
+      "ground_truth": {
+        "titulo": "Junta",
+        "fecha": "2026-09-10",
+        "hora_inicio": "15:30",
+        "duracion_minutos": null,
+        "participantes": ["equipo de ventas"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 11,
+      "categoria": "con_participantes",
+      "texto": "Llamada con el cliente el 4 de septiembre a las 11",
+      "ground_truth": {
+        "titulo": "Llamada",
+        "fecha": "2026-09-04",
+        "hora_inicio": "11:00",
+        "duracion_minutos": null,
+        "participantes": ["cliente"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 12,
+      "categoria": "con_participantes",
+      "texto": "Almuerzo con María el viernes a las 13:00",
+      "ground_truth": {
+        "titulo": "Almuerzo",
+        "fecha": "2026-09-04",
+        "hora_inicio": "13:00",
+        "duracion_minutos": null,
+        "participantes": ["María"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 13,
+      "categoria": "con_participantes",
+      "texto": "Reunión con Dani y el profe el 8 de septiembre a las 9:30",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-08",
+        "hora_inicio": "09:30",
+        "duracion_minutos": null,
+        "participantes": ["Dani", "el profe"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 14,
+      "categoria": "con_participantes",
+      "texto": "Café con Juan y Carla el lunes a las 17:00",
+      "ground_truth": {
+        "titulo": "Café",
+        "fecha": "2026-09-07",
+        "hora_inicio": "17:00",
+        "duracion_minutos": null,
+        "participantes": ["Juan", "Carla"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 15,
+      "categoria": "con_participantes",
+      "texto": "Review con los desarrolladores el 10 de septiembre a las 14:00",
+      "ground_truth": {
+        "titulo": "Review",
+        "fecha": "2026-09-10",
+        "hora_inicio": "14:00",
+        "duracion_minutos": null,
+        "participantes": ["los desarrolladores"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 16,
+      "categoria": "ambigua",
+      "texto": "Reunión mañana a las 10",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-02",
+        "hora_inicio": "10:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 17,
+      "categoria": "ambigua",
+      "texto": "Junta el lunes a las 9",
+      "ground_truth": {
+        "titulo": "Junta",
+        "fecha": "2026-09-07",
+        "hora_inicio": "09:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 18,
+      "categoria": "ambigua",
+      "texto": "Entrevista pasado mañana a las 15:30",
+      "ground_truth": {
+        "titulo": "Entrevista",
+        "fecha": "2026-09-03",
+        "hora_inicio": "15:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 19,
+      "categoria": "ambigua",
+      "texto": "Clase el viernes a las 8:30",
+      "ground_truth": {
+        "titulo": "Clase",
+        "fecha": "2026-09-04",
+        "hora_inicio": "08:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 20,
+      "categoria": "ambigua",
+      "texto": "Reunión el miércoles de la próxima semana a las 11",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-09",
+        "hora_inicio": "11:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 21,
+      "categoria": "ambigua",
+      "texto": "Cita en dos semanas a las 12:00",
+      "ground_truth": {
+        "titulo": "Cita",
+        "fecha": "2026-09-15",
+        "hora_inicio": "12:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 22,
+      "categoria": "ambigua",
+      "texto": "Dentista el próximo martes a las 16:30",
+      "ground_truth": {
+        "titulo": "Dentista",
+        "fecha": "2026-09-08",
+        "hora_inicio": "16:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 23,
+      "categoria": "compleja",
+      "texto": "Reunión de planificación el 15 de septiembre a las 11:30 por 1 hora con Ana y Pedro en la sala B-11",
+      "ground_truth": {
+        "titulo": "Reunión de planificación",
+        "fecha": "2026-09-15",
+        "hora_inicio": "11:30",
+        "duracion_minutos": 60,
+        "participantes": ["Ana", "Pedro"],
+        "ubicacion": "sala B-11",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 24,
+      "categoria": "compleja",
+      "texto": "Presentación de tesis el jueves 10 de septiembre a las 10:00, 2 horas, con el comité evaluador, en el auditorio, avísame 30 minutos antes",
+      "ground_truth": {
+        "titulo": "Presentación de tesis",
+        "fecha": "2026-09-10",
+        "hora_inicio": "10:00",
+        "duracion_minutos": 120,
+        "participantes": ["comité evaluador"],
+        "ubicacion": "auditorio",
+        "recordatorio_minutos": 30,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 25,
+      "categoria": "compleja",
+      "texto": "Junta de sincronización el 8 de septiembre a las 9 con todo el equipo por videollamada, 45 minutos",
+      "ground_truth": {
+        "titulo": "Junta de sincronización",
+        "fecha": "2026-09-08",
+        "hora_inicio": "09:00",
+        "duracion_minutos": 45,
+        "participantes": ["todo el equipo"],
+        "ubicacion": "videollamada",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 26,
+      "categoria": "compleja",
+      "texto": "Almuerzo de trabajo con los clientes el viernes 4 de septiembre a las 13:30 en el restaurante La Tabla por 1 hora y media",
+      "ground_truth": {
+        "titulo": "Almuerzo de trabajo",
+        "fecha": "2026-09-04",
+        "hora_inicio": "13:30",
+        "duracion_minutos": 90,
+        "participantes": ["los clientes"],
+        "ubicacion": "restaurante La Tabla",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 27,
+      "categoria": "compleja",
+      "texto": "Workshop de IA el lunes 14 de septiembre de 9 a 12 en el salón 201",
+      "ground_truth": {
+        "titulo": "Workshop de IA",
+        "fecha": "2026-09-14",
+        "hora_inicio": "09:00",
+        "duracion_minutos": 180,
+        "participantes": [],
+        "ubicacion": "salón 201",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 28,
+      "categoria": "compleja",
+      "texto": "Entrevista técnica el 11 de septiembre a las 16:00 por Zoom con el equipo de RRHH, 1 hora, recordatorio 10 minutos antes",
+      "ground_truth": {
+        "titulo": "Entrevista técnica",
+        "fecha": "2026-09-11",
+        "hora_inicio": "16:00",
+        "duracion_minutos": 60,
+        "participantes": ["equipo de RRHH"],
+        "ubicacion": "Zoom",
+        "recordatorio_minutos": 10,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 29,
+      "categoria": "compleja",
+      "texto": "Reunión de directorio el martes 8 de septiembre a las 18:30 en la oficina central, 2 horas, con los 5 directores",
+      "ground_truth": {
+        "titulo": "Reunión de directorio",
+        "fecha": "2026-09-08",
+        "hora_inicio": "18:30",
+        "duracion_minutos": 120,
+        "participantes": ["los 5 directores"],
+        "ubicacion": "oficina central",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 30,
+      "categoria": "edge_case",
+      "texto": "Reunión el 15 de septiembre",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-15",
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 31,
+      "categoria": "edge_case",
+      "texto": "Llamada a las 14:30",
+      "ground_truth": {
+        "titulo": "Llamada",
+        "fecha": null,
+        "hora_inicio": "14:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 32,
+      "categoria": "edge_case",
+      "texto": "Junta de emergencia",
+      "ground_truth": {
+        "titulo": "Junta de emergencia",
+        "fecha": null,
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 33,
+      "categoria": "edge_case",
+      "texto": "Call with the client on Monday at 5pm",
+      "ground_truth": {
+        "titulo": "Call",
+        "fecha": "2026-09-07",
+        "hora_inicio": "17:00",
+        "duracion_minutos": null,
+        "participantes": ["client"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 34,
+      "categoria": "edge_case",
+      "texto": "Reunión el 5 de septiembre a las 9 en horario de Madrid",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-05",
+        "hora_inicio": "09:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "Europe/Madrid"
+      }
+    },
+    {
+      "id": 35,
+      "categoria": "edge_case",
+      "texto": "Reunión el 10/09 a las 10 pm",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-10",
+        "hora_inicio": "22:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 36,
+      "categoria": "edge_case",
+      "texto": "Reunión el lunes 7 de septiembre sin hora definida",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-07",
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 37,
+      "categoria": "edge_case",
+      "texto": "Junta virtual mañana",
+      "ground_truth": {
+        "titulo": "Junta",
+        "fecha": "2026-09-02",
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": "virtual",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 38,
+      "categoria": "chat",
+      "texto": "Oye, agéndame una junta con la Dani pasado mañana a las 4 en la sala B-11",
+      "ground_truth": {
+        "titulo": "junta",
+        "fecha": "2026-09-03",
+        "hora_inicio": "16:00",
+        "duracion_minutos": null,
+        "participantes": ["Dani"],
+        "ubicacion": "sala B-11",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 39,
+      "categoria": "chat",
+      "texto": "agenda reunion mañana 10am porfa",
+      "ground_truth": {
+        "titulo": "reunion",
+        "fecha": "2026-09-02",
+        "hora_inicio": "10:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 40,
+      "categoria": "chat",
+      "texto": "q onda, quedamos el viernes a las 7 en lo de siempre?",
+      "ground_truth": {
+        "titulo": "Quedada",
+        "fecha": "2026-09-04",
+        "hora_inicio": "19:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": "lo de siempre",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 41,
+      "categoria": "chat",
+      "texto": "hey schedule a call with the team on Friday 3pm",
+      "ground_truth": {
+        "titulo": "call",
+        "fecha": "2026-09-04",
+        "hora_inicio": "15:00",
+        "duracion_minutos": null,
+        "participantes": ["team"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 42,
+      "categoria": "chat",
+      "texto": "acuerdate que el lunes tenemos la presentación a las 9",
+      "ground_truth": {
+        "titulo": "presentación",
+        "fecha": "2026-09-07",
+        "hora_inicio": "09:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 43,
+      "categoria": "chat",
+      "texto": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes",
+      "ground_truth": {
+        "titulo": "reunión de sincronización",
+        "fecha": "2026-09-10",
+        "hora_inicio": "14:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": 15,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 44,
+      "categoria": "chat",
+      "texto": "junta virtual mañana a las 5 con el profe",
+      "ground_truth": {
+        "titulo": "junta",
+        "fecha": "2026-09-02",
+        "hora_inicio": "17:00",
+        "duracion_minutos": null,
+        "participantes": ["el profe"],
+        "ubicacion": "virtual",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 45,
+      "categoria": "chat",
+      "texto": "reunión con Dani el jueves a las 11, 1 hora",
+      "ground_truth": {
+        "titulo": "reunión",
+        "fecha": "2026-09-03",
+        "hora_inicio": "11:00",
+        "duracion_minutos": 60,
+        "participantes": ["Dani"],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    }
+  ]
+}
