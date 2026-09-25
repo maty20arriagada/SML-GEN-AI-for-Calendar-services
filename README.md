@@ -43,3 +43,34 @@ Las fechas relativas se interpretan desde el 1 de septiembre de 2026.
 1. Abrir `prueba_d2.ipynb` en Google Colab y activar una GPU T4.
 2. Subir `frases (1).json` y ejecutar las celdas en orden.
 3. Para evaluar salidas guardadas localmente, ejecutar `python evaluar.py --evaluar tinyllama`.
+## Skill `agenda-reuniones` para Qwen3-4B-Instruct-2507 + Google Calendar, zona `America/Santiago`.
+
+## Abrir en Colab (repo privado)
+
+Opción A — UI: Colab → Abrir cuaderno → pestaña GitHub → autoriza `maty20arriagada` → `SML-GEN-AI-for-Calendar-services` → `notebooks/agenda_colab.ipynb`.
+
+Opción B — Clone con PAT en Colab (celda 2 del notebook lo hace solo si falta la skill):
+```python
+# Secrets necesarios: GITHUB_PAT (scope repo), HF_TOKEN (Read)
+```
+
+## Estructura
+
+- `.opencode/skills/agenda-reuniones/SKILL.md` — skill portable, también usada como system-prompt en Colab
+- `notebooks/agenda_colab.ipynb` — flujo HF Inference API + Calendar
+- `requirements-colab.txt`, `scripts/get_google_token.py`
+- `opencode.json` — config opencode local (HF + MCP remoto Google)
+- `INICIAR.md` — uso local opencode. `COLAB.md` — uso Colab.
+
+## Subir D2 al privado
+
+```bash
+git init
+git branch -M main
+git remote add origin https://github.com/maty20arriagada/SML-GEN-AI-for-Calendar-services.git
+git add .opencode opencode.json notebooks requirements-colab.txt scripts INICIAR.md COLAB.md README.md .env.example init-check.sh
+git commit -m "skill agenda + colab Qwen 4B Chile"
+git push -u origin main
+```
+
+No subir `.env` ni `token.json`.
