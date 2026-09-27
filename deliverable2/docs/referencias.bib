@@ -1,0 +1,178 @@
+% referencias.bib — Respaldo empírico para Deliverable 2
+% Uso en deliverable2.tex: \bibliography{referencias} o \input con \cite{clave}
+
+% ============================================================
+% A. El modelo NO debe calcular fechas: fallas de aritmética
+% ============================================================
+
+@inproceedings{qian2023limitations,
+  title     = {Limitations of Language Models in Arithmetic and Symbolic Induction},
+  author    = {Qian, Jing and Wang, Hong and Li, Zekun and Li, Shiyang and Yan, Xifeng},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {9285--9298},
+  year      = {2023},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2023.acl-long.516/},
+  doi       = {10.18653/v1/2023.acl-long.516}
+}
+
+@inproceedings{bhatia2025datefragments,
+  title     = {Date Fragments: A Hidden Bottleneck of Tokenization for Temporal Reasoning},
+  author    = {Bhatia, Gagan and Peyrard, Maxime and Zhao, Wei},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://arxiv.org/abs/2505.16088},
+  note      = {arXiv:2505.16088}
+}
+
+% ============================================================
+% B. Delegar el cálculo a herramientas deterministas (tool use)
+% ============================================================
+
+@inproceedings{schick2023toolformer,
+  title     = {Toolformer: Language Models Can Teach Themselves to Use Tools},
+  author    = {Schick, Timo and Dwivedi-Yu, Jane and Dess{\`i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2302.04761}
+}
+
+@inproceedings{gao2023pal,
+  title     = {PAL: Program-aided Language Models},
+  author    = {Gao, Luyu and Madaan, Aman and Zhou, Shuyan and Alon, Uri and Liu, Pengfei and Yang, Yiming and Callan, Jamie and Neubig, Graham},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+  series    = {PMLR},
+  volume    = {202},
+  year      = {2023},
+  url       = {https://proceedings.mlr.press/v202/gao23f.html}
+}
+
+% ============================================================
+% C. Resolución temporal por REGLAS: el estado del arte clásico
+% ============================================================
+
+@inproceedings{strotgen2010heideltime,
+  title     = {{H}eidel{T}ime: High Quality Rule-Based Extraction and Normalization of Temporal Expressions},
+  author    = {Str{\"o}tgen, Jannik and Gertz, Michael},
+  booktitle = {Proceedings of the 5th International Workshop on Semantic Evaluation (SemEval)},
+  pages     = {321--324},
+  year      = {2010},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/S10-1071/}
+}
+
+@inproceedings{chang2012sutime,
+  title     = {{SUT}ime: A Library for Recognizing and Normalizing Time Expressions},
+  author    = {Chang, Angel X. and Manning, Christopher D.},
+  booktitle = {Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC)},
+  pages     = {3735--3740},
+  year      = {2012},
+  publisher = {European Language Resources Association},
+  url       = {https://aclanthology.org/L12-1122/}
+}
+
+@inproceedings{stroetgen2015baseline,
+  title     = {A Baseline Temporal Tagger for all Languages},
+  author    = {Str{\"o}tgen, Jannik and Gertz, Michael and others},
+  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2015},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/D15-1063/}
+}
+
+% ============================================================
+% D. Razonamiento temporal en LLMs sigue siendo difícil (límites)
+% ============================================================
+
+@inproceedings{chu2024timebench,
+  title     = {{T}ime{B}ench: A Comprehensive Evaluation of Temporal Reasoning Abilities in Large Language Models},
+  author    = {Chu, Zheng and Chen, Jingchang and Chen, Qianglong and others},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {1204--1228},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2024.acl-long.66/}
+}
+
+@inproceedings{bazaga2025tiser,
+  title     = {Learning to Reason Over Time: Timeline Self-Reflection for Improved Temporal Reasoning in Language Models},
+  author    = {Bazaga, Adri{\'a}n and Blloshmi, Rexhina and Byrne, Bill and de Gispert, Adri{\`a}},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {28014--28033},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.acl-long.1358/}
+}
+
+@inproceedings{zheng2024naturalplan,
+  title     = {{NATURAL PLAN}: Benchmarking {LLMs} on Natural Language Planning},
+  author    = {Zheng, Huaixiu Steven and Mishra, Swaroop and Zhang, Hugh and Chen, Xinyun and Chen, Minmin and Nova, Azade and Hou, Le and Cheng, Heng-Tze and Le, Quoc V. and Chi, Ed H. and Zhou, Denny},
+  booktitle = {arXiv preprint},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2406.04520},
+  note      = {arXiv:2406.04520}
+}
+
+% ============================================================
+% E. Function calling con modelos pequeños
+% ============================================================
+
+@inproceedings{erdogan2024tinyagent,
+  title     = {{T}iny{A}gent: Function Calling at the Edge},
+  author    = {Erdogan, Lutfi Eren and Lee, Nicholas and Jha, Siddharth and Kim, Sehoon and Tabrizi, Ryan and Moon, Suhong and Hooper, Coleman Richard Charles and Anumanchipalli, Gopala and Keutzer, Kurt and Gholami, Amir},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  pages     = {80--88},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  address   = {Miami, Florida, USA},
+  url       = {https://aclanthology.org/2024.emnlp-demo.9/},
+  doi       = {10.18653/v1/2024.emnlp-demo.9}
+}
+
+% ============================================================
+% F. Salida estructurada y descomposición
+% ============================================================
+
+@inproceedings{geng2023grammar,
+  title     = {Grammar-Constrained Decoding for Structured {NLP} Tasks without Finetuning},
+  author    = {Geng, Saibo and Josifoski, Martin and Peyrard, Maxime and West, Robert},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2023},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2023.emnlp-main.674/}
+}
+
+@inproceedings{zhang2025selectthendecompose,
+  title     = {Select-Then-Decompose: From Empirical Analysis to Adaptive Selection Strategy for Task Decomposition in Large Language Models},
+  author    = {Zhang, Shun and others},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.emnlp-main.278/}
+}
+
+% ============================================================
+% G. Dominio calendario / agentes
+% ============================================================
+
+@inproceedings{wijerathne2025scheduleme,
+  title     = {{S}chedule{M}e: Multi-Agent Calendar Assistant},
+  author    = {Wijerathne, Oshadha and others},
+  booktitle = {Proceedings of the 29th Pacific Asia Conference on Language, Information and Computation (PACLIC)},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.paclic-1.27/}
+}
+
+% ============================================================
+% H. Modelo elegido
+% ============================================================
+
+@article{yang2025qwen3,
+  title   = {Qwen3 Technical Report},
+  author  = {Yang, An and Li, Anfeng and Yang, Baosong and Zhang, Beichen and Hui, Binyuan and Zheng, Bo and Yu, Bowen and Gao, Chang and others},
+  journal = {arXiv preprint arXiv:2505.09388},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2505.09388}
+}

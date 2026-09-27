@@ -1,0 +1,83 @@
+{
+ "seed": 42,
+ "perfil": "mixto",
+ "descartados": {
+  "solape_test": 0,
+  "duplicado": 4,
+  "autochequeo": 81,
+  "intentos": 3485
+ },
+ "train": {
+  "n": 3200,
+  "por_categoria": {
+   "chat": 1902,
+   "edge_case": 704,
+   "ambigua": 335,
+   "compleja": 229,
+   "con_participantes": 22,
+   "simple": 8
+  },
+  "por_estilo": {
+   "chat_es": 1409,
+   "formal_es": 802,
+   "chat_en": 493,
+   "formal_en": 496
+  },
+  "patrones_participantes": {
+   "quita": 1673,
+   "conserva": 990,
+   "nombre": 327,
+   "ninguno": 210
+  },
+  "titulos_derivados": 238,
+  "con_fecha": 1718,
+  "sin_fecha": 1482
+ },
+ "dev": {
+  "n": 200,
+  "por_categoria": {
+   "ambigua": 27,
+   "compleja": 12,
+   "chat": 110,
+   "edge_case": 50,
+   "con_participantes": 1
+  },
+  "por_estilo": {
+   "formal_es": 63,
+   "formal_en": 27,
+   "chat_en": 34,
+   "chat_es": 76
+  },
+  "patrones_participantes": {
+   "conserva": 57,
+   "quita": 106,
+   "nombre": 26,
+   "ninguno": 11
+  },
+  "titulos_derivados": 9,
+  "con_fecha": 107,
+  "sin_fecha": 93
+ },
+ "hard_dev": {
+  "n": 150,
+  "por_categoria": {
+   "chat": 108,
+   "ambigua": 13,
+   "edge_case": 21,
+   "compleja": 8
+  },
+  "por_estilo": {
+   "chat_es": 82,
+   "formal_en": 14,
+   "formal_es": 28,
+   "chat_en": 26
+  },
+  "patrones_participantes": {
+   "conserva": 52,
+   "quita": 98
+  },
+  "titulos_derivados": 36,
+  "con_fecha": 87,
+  "sin_fecha": 63
+ }
+}

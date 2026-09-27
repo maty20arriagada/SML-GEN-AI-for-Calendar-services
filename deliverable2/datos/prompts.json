@@ -1,0 +1,26 @@
+{
+ "fecha_referencia": "2026-09-01",
+ "dia_referencia": "martes",
+ "prompt_directo": "Dada la siguiente frase sobre una reunion, extrae los campos en formato JSON:\n- titulo\n- fecha (formato YYYY-MM-DD, null si no especifica)\n- hora_inicio (formato HH:MM 24h, null si no especifica)\n- duracion_minutos (numero, null si no especifica)\n- participantes (lista de nombres, [] si no hay)\n- ubicacion (texto, null si no especifica)\n- recordatorio_minutos (numero, null si no especifica)\n- zona_horaria (texto)\n- recurrence (texto, null si no se repite)\n\nFrase: \"{frase}\"\n\nRespuesta (SOLO JSON):",
+ "prompt_estructurado": "Eres un extractor de datos de calendario.\n\nREGLAS:\n1. HOY ES {dia} {fecha}. Calcula fechas relativas desde esta fecha.\n2. Si un campo NO se menciona, usa null (o [] para participantes). NUNCA inventes.\n3. titulo: nombre breve del evento; elimina fecha, hora, participantes y ubicacion, pero conserva sus descriptores (p. ej., \"Cita médica\" o \"Reunión de planificación\"). Conserva el idioma de la frase.\n4. fecha: YYYY-MM-DD. hora_inicio: HH:MM 24h.\n5. duracion_minutos: entero (1 hora=60). Si no hay = null.\n6. participantes: lista de nombres reales. Si no hay = [].\n7. ubicacion: donde se realiza. Si no se menciona = null.\n8. recordatorio_minutos: entero. Si no se menciona = null.\n9. zona_horaria: \"America/Santiago\" por defecto; Madrid = \"Europe/Madrid\" y Argentina = \"America/Argentina/Buenos_Aires\".\n10. Si se menciona virtual, videollamada o una plataforma, extraelo como ubicacion.\n11. Si una fecha u hora es invalida, usa null en ese campo; no la corrijas inventando datos.\n\nEJEMPLOS:\n\nFrase: \"Reunión con Ana el viernes a las 10am\"\n{{\"titulo\": \"Reunión\", \"fecha\": \"2026-09-04\", \"hora_inicio\": \"10:00\", \"duracion_minutos\": null, \"participantes\": [\"Ana\"], \"ubicacion\": null, \"recordatorio_minutos\": null, \"zona_horaria\": \"America/Santiago\"}}\n\nFrase: \"Reunión de 2 horas el 15/09 a las 9:30 en la sala de conferencias, recordar 30 min\"\n{{\"titulo\": \"Reunión\", \"fecha\": \"2026-09-15\", \"hora_inicio\": \"09:30\", \"duracion_minutos\": 120, \"participantes\": [], \"ubicacion\": \"sala de conferencias\", \"recordatorio_minutos\": 30, \"zona_horaria\": \"America/Santiago\"}}\n\nFrase: \"Reunión\"\n{{\"titulo\": \"Reunión\", \"fecha\": null, \"hora_inicio\": null, \"duracion_minutos\": null, \"participantes\": [], \"ubicacion\": null, \"recordatorio_minutos\": null, \"zona_horaria\": \"America/Santiago\"}}\n\nFrase: \"Meeting on Friday at 10am\"\n{{\"titulo\": \"Meeting\", \"fecha\": \"2026-09-04\", \"hora_inicio\": \"10:00\", \"duracion_minutos\": null, \"participantes\": [], \"ubicacion\": null, \"recordatorio_minutos\": null, \"zona_horaria\": \"America/Santiago\"}}\n\nFrase: \"Junta virtual mañana a las 5 con el profe\"\n{{\"titulo\": \"Junta\", \"fecha\": \"2026-09-02\", \"hora_inicio\": \"17:00\", \"duracion_minutos\": null, \"participantes\": [\"el profe\"], \"ubicacion\": \"virtual\", \"recordatorio_minutos\": null, \"zona_horaria\": \"America/Santiago\"}}",
+ "prompt_semantico": "Eres un extractor de datos de calendario.\n\nREGLAS:\n1. Devuelve SOLO JSON con estos seis campos: titulo, hora_inicio, duracion_minutos, participantes, ubicacion, recordatorio_minutos.\n2. NO calcules ni devuelvas fechas: el campo fecha lo resuelve otro componente del sistema.\n3. NO devuelvas zona_horaria ni recurrence: los calcula el sistema con reglas.\n4. Si un campo NO se menciona, usa null (o [] para participantes). NUNCA inventes.\n5. titulo: nombre breve del evento; elimina hora, participantes y ubicacion, pero conserva sus descriptores (p. ej., \"Cita médica\", \"Reunión de planificación\"). Conserva el idioma de la frase.\n6. Si la frase es un verbo de encuentro sin nombre de evento (p. ej. \"quedamos el viernes\", \"presentamos el lunes\"), usa la etiqueta nominal del evento: \"quedamos\" -> \"Quedada\", \"presentamos\" -> \"Presentación\", \"comemos\" -> \"Almuerzo\".\n7. hora_inicio: HH:MM 24h. Si no hay = null.\n8. duracion_minutos: entero (1 hora=60). Si no hay = null.\n9. participantes: nombres tal como se mencionan, PERO quitando el articulo inicial singular (\"el\"/\"la\"/\"the\"): \"con el cliente\" -> [\"cliente\"], \"con la Dani\" -> [\"Dani\"], \"with the team\" -> [\"team\"]. El articulo plural o total SI se conserva: \"con los clientes\" -> [\"los clientes\"], \"con todo el equipo\" -> [\"todo el equipo\"], \"con los 5 directores\" -> [\"los 5 directores\"]. Excepcion: \"el profe\" se conserva entero -> [\"el profe\"]. Si no hay = [].\n10. ubicacion: donde se realiza. Si no se menciona = null.\n11. recordatorio_minutos: entero. Si no se menciona = null.",
+ "campos_contrato": [
+  "titulo",
+  "fecha",
+  "hora_inicio",
+  "duracion_minutos",
+  "participantes",
+  "ubicacion",
+  "recordatorio_minutos",
+  "zona_horaria",
+  "recurrence"
+ ],
+ "campos_modelo": [
+  "titulo",
+  "hora_inicio",
+  "duracion_minutos",
+  "participantes",
+  "ubicacion",
+  "recordatorio_minutos"
+ ]
+}

@@ -1,0 +1,17 @@
+% Generado por experimentos/evaluar_todo.py -- no editar a mano
+% Criterio de correccion: evaluar.py de D1 (8 campos con ground truth)
+\begin{center}
+\scriptsize
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+Brazo & Exact. & \texttt{titulo} & \texttt{fecha} & \texttt{hora\_inicio} & \texttt{duracion\_minutos} & \texttt{participantes} & \texttt{ubicacion} & \texttt{recordatorio\_minutos} & \texttt{zona\_horaria} \\
+\midrule
+Prompt directo (baseline) (A) & \textbf{2.2\%} & 82.2\% & 4.4\% & 100.0\% & 97.8\% & 80.0\% & 97.8\% & 100.0\% & 100.0\% \\
+Prompt estructurado (B) & \textbf{73.3\%} & 95.6\% & 84.4\% & 100.0\% & 100.0\% & 86.7\% & 100.0\% & 97.8\% & 100.0\% \\
+Prompt estructurado + tool (C) & \textbf{82.2\%} & 95.6\% & 100.0\% & 100.0\% & 100.0\% & 86.7\% & 100.0\% & 97.8\% & 100.0\% \\
+Fine-tune + tool (solucion) (D) & \textbf{84.4\%} & 97.8\% & 100.0\% & 100.0\% & 100.0\% & 86.7\% & 100.0\% & 100.0\% & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% n=45 frases de Benchmark2 (held-out), mismo criterio para todos los brazos

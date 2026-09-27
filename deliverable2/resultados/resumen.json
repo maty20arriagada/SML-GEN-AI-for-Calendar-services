@@ -1,0 +1,352 @@
+{
+ "A": {
+  "metricas": {
+   "total_frases": 45,
+   "correctos_totales": 1,
+   "precision_total": 2.2,
+   "precision_por_categoria": {
+    "simple": {
+     "total": 8,
+     "correctos": 0,
+     "precision": 0.0
+    },
+    "con_participantes": {
+     "total": 7,
+     "correctos": 0,
+     "precision": 0.0
+    },
+    "ambigua": {
+     "total": 7,
+     "correctos": 0,
+     "precision": 0.0
+    },
+    "compleja": {
+     "total": 7,
+     "correctos": 0,
+     "precision": 0.0
+    },
+    "edge_case": {
+     "total": 8,
+     "correctos": 1,
+     "precision": 12.5
+    },
+    "chat": {
+     "total": 8,
+     "correctos": 0,
+     "precision": 0.0
+    }
+   },
+   "precision_por_campo": {
+    "titulo": {
+     "total": 45,
+     "correctos": 37,
+     "precision": 82.2
+    },
+    "fecha": {
+     "total": 45,
+     "correctos": 2,
+     "precision": 4.4
+    },
+    "hora_inicio": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "duracion_minutos": {
+     "total": 45,
+     "correctos": 44,
+     "precision": 97.8
+    },
+    "participantes": {
+     "total": 45,
+     "correctos": 36,
+     "precision": 80.0
+    },
+    "ubicacion": {
+     "total": 45,
+     "correctos": 44,
+     "precision": 97.8
+    },
+    "recordatorio_minutos": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "zona_horaria": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    }
+   },
+   "errores_por_tipo": {
+    "omision": 34,
+    "valor_incorrecto": 28
+   }
+  },
+  "n": 45,
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ "B": {
+  "metricas": {
+   "total_frases": 45,
+   "correctos_totales": 33,
+   "precision_total": 73.3,
+   "precision_por_categoria": {
+    "simple": {
+     "total": 8,
+     "correctos": 8,
+     "precision": 100.0
+    },
+    "con_participantes": {
+     "total": 7,
+     "correctos": 4,
+     "precision": 57.1
+    },
+    "ambigua": {
+     "total": 7,
+     "correctos": 3,
+     "precision": 42.9
+    },
+    "compleja": {
+     "total": 7,
+     "correctos": 6,
+     "precision": 85.7
+    },
+    "edge_case": {
+     "total": 8,
+     "correctos": 7,
+     "precision": 87.5
+    },
+    "chat": {
+     "total": 8,
+     "correctos": 5,
+     "precision": 62.5
+    }
+   },
+   "precision_por_campo": {
+    "titulo": {
+     "total": 45,
+     "correctos": 43,
+     "precision": 95.6
+    },
+    "fecha": {
+     "total": 45,
+     "correctos": 38,
+     "precision": 84.4
+    },
+    "hora_inicio": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "duracion_minutos": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "participantes": {
+     "total": 45,
+     "correctos": 39,
+     "precision": 86.7
+    },
+    "ubicacion": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "recordatorio_minutos": {
+     "total": 45,
+     "correctos": 44,
+     "precision": 97.8
+    },
+    "zona_horaria": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    }
+   },
+   "errores_por_tipo": {
+    "omision": 6,
+    "valor_incorrecto": 9,
+    "inventado": 1
+   }
+  },
+  "n": 45,
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ "C": {
+  "metricas": {
+   "total_frases": 45,
+   "correctos_totales": 37,
+   "precision_total": 82.2,
+   "precision_por_categoria": {
+    "simple": {
+     "total": 8,
+     "correctos": 8,
+     "precision": 100.0
+    },
+    "con_participantes": {
+     "total": 7,
+     "correctos": 5,
+     "precision": 71.4
+    },
+    "ambigua": {
+     "total": 7,
+     "correctos": 6,
+     "precision": 85.7
+    },
+    "compleja": {
+     "total": 7,
+     "correctos": 6,
+     "precision": 85.7
+    },
+    "edge_case": {
+     "total": 8,
+     "correctos": 7,
+     "precision": 87.5
+    },
+    "chat": {
+     "total": 8,
+     "correctos": 5,
+     "precision": 62.5
+    }
+   },
+   "precision_por_campo": {
+    "titulo": {
+     "total": 45,
+     "correctos": 43,
+     "precision": 95.6
+    },
+    "fecha": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "hora_inicio": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "duracion_minutos": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "participantes": {
+     "total": 45,
+     "correctos": 39,
+     "precision": 86.7
+    },
+    "ubicacion": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "recordatorio_minutos": {
+     "total": 45,
+     "correctos": 44,
+     "precision": 97.8
+    },
+    "zona_horaria": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    }
+   },
+   "errores_por_tipo": {
+    "omision": 6,
+    "valor_incorrecto": 2,
+    "inventado": 1
+   }
+  },
+  "n": 45,
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ "D": {
+  "metricas": {
+   "total_frases": 45,
+   "correctos_totales": 38,
+   "precision_total": 84.4,
+   "precision_por_categoria": {
+    "simple": {
+     "total": 8,
+     "correctos": 8,
+     "precision": 100.0
+    },
+    "con_participantes": {
+     "total": 7,
+     "correctos": 5,
+     "precision": 71.4
+    },
+    "ambigua": {
+     "total": 7,
+     "correctos": 7,
+     "precision": 100.0
+    },
+    "compleja": {
+     "total": 7,
+     "correctos": 6,
+     "precision": 85.7
+    },
+    "edge_case": {
+     "total": 8,
+     "correctos": 7,
+     "precision": 87.5
+    },
+    "chat": {
+     "total": 8,
+     "correctos": 5,
+     "precision": 62.5
+    }
+   },
+   "precision_por_campo": {
+    "titulo": {
+     "total": 45,
+     "correctos": 44,
+     "precision": 97.8
+    },
+    "fecha": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "hora_inicio": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "duracion_minutos": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "participantes": {
+     "total": 45,
+     "correctos": 39,
+     "precision": 86.7
+    },
+    "ubicacion": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "recordatorio_minutos": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    },
+    "zona_horaria": {
+     "total": 45,
+     "correctos": 45,
+     "precision": 100.0
+    }
+   },
+   "errores_por_tipo": {
+    "omision": 6,
+    "valor_incorrecto": 1
+   }
+  },
+  "n": 45,
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ }
+}

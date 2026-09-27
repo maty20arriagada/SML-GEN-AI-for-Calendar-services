@@ -1,0 +1,748 @@
+[
+ {
+  "id": 1,
+  "texto": "Reunión el 4 de septiembre a las 9 am",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2023-09-04",
+   "hora_inicio": "09:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 2,
+  "texto": "Cita médica el 15 de septiembre a las 10:30",
+  "resultado_modelo": {
+   "titulo": "Cita médica",
+   "fecha": "2023-09-15",
+   "hora_inicio": "10:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 3,
+  "texto": "Junta el 7 de septiembre a las 16:00",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2023-09-07",
+   "hora_inicio": "16:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 4,
+  "texto": "Meeting on September 8th at 2pm",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2023-09-08",
+   "hora_inicio": "14:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 5,
+  "texto": "Entrevista el 10/09 a las 11:15",
+  "resultado_modelo": {
+   "titulo": "Entrevista",
+   "fecha": "2023-09-10",
+   "hora_inicio": "11:15",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 6,
+  "texto": "Taller el sábado 12 de septiembre a las 3 de la tarde",
+  "resultado_modelo": {
+   "titulo": "Taller",
+   "fecha": "2023-09-12",
+   "hora_inicio": "15:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 7,
+  "texto": "Presentación el 3 de septiembre a las 8:00",
+  "resultado_modelo": {
+   "titulo": "Presentación",
+   "fecha": "2023-09-03",
+   "hora_inicio": "08:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 8,
+  "texto": "Sesión de fotos el 11 de septiembre a las 17:30",
+  "resultado_modelo": {
+   "titulo": "Sesión de fotos",
+   "fecha": "2023-09-11",
+   "hora_inicio": "17:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 9,
+  "texto": "Reunión con Ana y Pedro el 2 de septiembre a las 10",
+  "resultado_modelo": {
+   "titulo": "Reunión con Ana y Pedro",
+   "fecha": "2023-09-02",
+   "hora_inicio": "10:00",
+   "duracion_minutos": null,
+   "participantes": [
+    "Ana",
+    "Pedro"
+   ],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 10,
+  "texto": "Junta con el equipo de ventas el jueves 10 de septiembre a las 15:30",
+  "resultado_modelo": {
+   "titulo": "Junta con el equipo de ventas",
+   "fecha": "2023-09-10",
+   "hora_inicio": "15:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 11,
+  "texto": "Llamada con el cliente el 4 de septiembre a las 11",
+  "resultado_modelo": {
+   "titulo": "Llamada con el cliente",
+   "fecha": "2023-09-04",
+   "hora_inicio": "11:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 12,
+  "texto": "Almuerzo con María el viernes a las 13:00",
+  "resultado_modelo": {
+   "titulo": "Almuerzo con María",
+   "fecha": "2024-05-10",
+   "hora_inicio": "13:00",
+   "duracion_minutos": null,
+   "participantes": [
+    "María"
+   ],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 13,
+  "texto": "Reunión con Dani y el profe el 8 de septiembre a las 9:30",
+  "resultado_modelo": {
+   "titulo": "Reunión con Dani y el profe",
+   "fecha": "2023-09-08",
+   "hora_inicio": "09:30",
+   "duracion_minutos": null,
+   "participantes": [
+    "Dani",
+    "el profe"
+   ],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 14,
+  "texto": "Café con Juan y Carla el lunes a las 17:00",
+  "resultado_modelo": {
+   "titulo": "Café con Juan y Carla",
+   "fecha": null,
+   "hora_inicio": "17:00",
+   "duracion_minutos": null,
+   "participantes": [
+    "Juan",
+    "Carla"
+   ],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 15,
+  "texto": "Review con los desarrolladores el 10 de septiembre a las 14:00",
+  "resultado_modelo": {
+   "titulo": "Review con los desarrolladores",
+   "fecha": "2023-09-10",
+   "hora_inicio": "14:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 16,
+  "texto": "Reunión mañana a las 10",
+  "resultado_modelo": {
+   "titulo": "Reunión",
+   "fecha": null,
+   "hora_inicio": "10:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 17,
+  "texto": "Junta el lunes a las 9",
+  "resultado_modelo": {
+   "titulo": "Junta",
+   "fecha": null,
+   "hora_inicio": "09:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 18,
+  "texto": "Entrevista pasado mañana a las 15:30",
+  "resultado_modelo": {
+   "titulo": "Entrevista",
+   "fecha": null,
+   "hora_inicio": "15:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 19,
+  "texto": "Clase el viernes a las 8:30",
+  "resultado_modelo": {
+   "titulo": "Clase",
+   "fecha": null,
+   "hora_inicio": "08:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 20,
+  "texto": "Reunión el miércoles de la próxima semana a las 11",
+  "resultado_modelo": {
+   "titulo": "Reunión",
+   "fecha": null,
+   "hora_inicio": "11:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 21,
+  "texto": "Cita en dos semanas a las 12:00",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": null,
+   "hora_inicio": "12:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 22,
+  "texto": "Dentista el próximo martes a las 16:30",
+  "resultado_modelo": {
+   "titulo": "Dentista",
+   "fecha": null,
+   "hora_inicio": "16:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 23,
+  "texto": "Reunión de planificación el 15 de septiembre a las 11:30 por 1 hora con Ana y Pedro en la sala B-11",
+  "resultado_modelo": {
+   "titulo": "Reunión de planificación",
+   "fecha": "2023-09-15",
+   "hora_inicio": "11:30",
+   "duracion_minutos": 60,
+   "participantes": [
+    "Ana",
+    "Pedro"
+   ],
+   "ubicacion": "sala B-11",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 24,
+  "texto": "Presentación de tesis el jueves 10 de septiembre a las 10:00, 2 horas, con el comité evaluador, en el auditorio, avísame 30 minutos antes",
+  "resultado_modelo": {
+   "titulo": "Presentación de tesis",
+   "fecha": "2023-09-10",
+   "hora_inicio": "10:00",
+   "duracion_minutos": 120,
+   "participantes": [
+    "comité evaluador"
+   ],
+   "ubicacion": "auditorio",
+   "recordatorio_minutos": 30,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 25,
+  "texto": "Junta de sincronización el 8 de septiembre a las 9 con todo el equipo por videollamada, 45 minutos",
+  "resultado_modelo": {
+   "titulo": "Junta de sincronización",
+   "fecha": "2023-09-08",
+   "hora_inicio": "09:00",
+   "duracion_minutos": 45,
+   "participantes": [],
+   "ubicacion": "videollamada",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 26,
+  "texto": "Almuerzo de trabajo con los clientes el viernes 4 de septiembre a las 13:30 en el restaurante La Tabla por 1 hora y media",
+  "resultado_modelo": {
+   "titulo": "Almuerzo de trabajo con los clientes",
+   "fecha": "2023-09-04",
+   "hora_inicio": "13:30",
+   "duracion_minutos": 90,
+   "participantes": [],
+   "ubicacion": "restaurante La Tabla",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 27,
+  "texto": "Workshop de IA el lunes 14 de septiembre de 9 a 12 en el salón 201",
+  "resultado_modelo": {
+   "titulo": "Workshop de IA",
+   "fecha": "2023-09-14",
+   "hora_inicio": "09:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": "salón 201",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 28,
+  "texto": "Entrevista técnica el 11 de septiembre a las 16:00 por Zoom con el equipo de RRHH, 1 hora, recordatorio 10 minutos antes",
+  "resultado_modelo": {
+   "titulo": "Entrevista técnica",
+   "fecha": "2023-09-11",
+   "hora_inicio": "16:00",
+   "duracion_minutos": 60,
+   "participantes": [
+    "equipo de RRHH"
+   ],
+   "ubicacion": "Zoom",
+   "recordatorio_minutos": 10,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 29,
+  "texto": "Reunión de directorio el martes 8 de septiembre a las 18:30 en la oficina central, 2 horas, con los 5 directores",
+  "resultado_modelo": {
+   "titulo": "Reunión de directorio",
+   "fecha": "2023-09-08",
+   "hora_inicio": "18:30",
+   "duracion_minutos": 120,
+   "participantes": [
+    "directores"
+   ],
+   "ubicacion": "oficina central",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 30,
+  "texto": "Reunión el 15 de septiembre",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2023-09-15",
+   "hora_inicio": null,
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 31,
+  "texto": "Llamada a las 14:30",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": null,
+   "hora_inicio": "14:30",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 32,
+  "texto": "Junta de emergencia",
+  "resultado_modelo": {
+   "titulo": "Junta de emergencia",
+   "fecha": null,
+   "hora_inicio": null,
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 33,
+  "texto": "Call with the client on Monday at 5pm",
+  "resultado_modelo": {
+   "titulo": "Call with the client",
+   "fecha": null,
+   "hora_inicio": "17:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 34,
+  "texto": "Reunión el 5 de septiembre a las 9 en horario de Madrid",
+  "resultado_modelo": {
+   "titulo": "Reunión",
+   "fecha": "2023-09-05",
+   "hora_inicio": "09:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "Europe/Madrid",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 35,
+  "texto": "Reunión el 10/09 a las 10 pm",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2023-09-10",
+   "hora_inicio": "22:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 36,
+  "texto": "Reunión el lunes 7 de septiembre sin hora definida",
+  "resultado_modelo": {
+   "titulo": "Reunión",
+   "fecha": "2023-09-07",
+   "hora_inicio": null,
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 37,
+  "texto": "Junta virtual mañana",
+  "resultado_modelo": {
+   "titulo": "Junta virtual",
+   "fecha": null,
+   "hora_inicio": null,
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": "virtual",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 38,
+  "texto": "Oye, agéndame una junta con la Dani pasado mañana a las 4 en la sala B-11",
+  "resultado_modelo": {
+   "titulo": "junta",
+   "fecha": "2024-04-12",
+   "hora_inicio": "16:00",
+   "duracion_minutos": null,
+   "participantes": [
+    "Dani"
+   ],
+   "ubicacion": "sala B-11",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 39,
+  "texto": "agenda reunion mañana 10am porfa",
+  "resultado_modelo": {
+   "titulo": "reunion",
+   "fecha": null,
+   "hora_inicio": "10:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 40,
+  "texto": "q onda, quedamos el viernes a las 7 en lo de siempre?",
+  "resultado_modelo": {
+   "titulo": null,
+   "fecha": "2024-05-10",
+   "hora_inicio": "19:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 41,
+  "texto": "hey schedule a call with the team on Friday 3pm",
+  "resultado_modelo": {
+   "titulo": "call with the team",
+   "fecha": null,
+   "hora_inicio": "15:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 42,
+  "texto": "acuerdate que el lunes tenemos la presentación a las 9",
+  "resultado_modelo": {
+   "titulo": "presentación",
+   "fecha": null,
+   "hora_inicio": "09:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 43,
+  "texto": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes",
+  "resultado_modelo": {
+   "titulo": "reunión de sincronización",
+   "fecha": "2024-10-10",
+   "hora_inicio": "14:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": 15,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 44,
+  "texto": "junta virtual mañana a las 5 con el profe",
+  "resultado_modelo": {
+   "titulo": "junta virtual",
+   "fecha": null,
+   "hora_inicio": "17:00",
+   "duracion_minutos": null,
+   "participantes": [
+    "profe"
+   ],
+   "ubicacion": "virtual",
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ },
+ {
+  "id": 45,
+  "texto": "reunión con Dani el jueves a las 11, 1 hora",
+  "resultado_modelo": {
+   "titulo": "reunión con Dani",
+   "fecha": null,
+   "hora_inicio": "11:00",
+   "duracion_minutos": 60,
+   "participantes": [
+    "Dani"
+   ],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  },
+  "entorno": "hf:Qwen/Qwen3-4B-Instruct-2507"
+ }
+]

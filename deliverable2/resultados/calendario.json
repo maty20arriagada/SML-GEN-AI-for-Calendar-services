@@ -1,0 +1,32 @@
+[
+ {
+  "id": "evt-0001",
+  "creado": "2026-09-25T02:49:06",
+  "evento": {
+   "titulo": "reunion",
+   "fecha": "2026-09-02",
+   "hora_inicio": "10:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  }
+ },
+ {
+  "id": "evt-0002",
+  "creado": "2026-09-24T23:56:24",
+  "evento": {
+   "titulo": "agenda reunion",
+   "fecha": "2026-09-02",
+   "hora_inicio": "10:00",
+   "duracion_minutos": null,
+   "participantes": [],
+   "ubicacion": null,
+   "recordatorio_minutos": null,
+   "zona_horaria": "America/Santiago",
+   "recurrence": null
+  }
+ }
+]
