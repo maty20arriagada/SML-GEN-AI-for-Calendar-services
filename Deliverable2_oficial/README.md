@@ -4,6 +4,8 @@
 Team: Matías Arriagada · Cristian Cárdenas · Pablo Silva · Daniela Vidal
 Repository: <https://github.com/maty20arriagada/SML-GEN-AI-for-Calendar-services>
 
+The video is played from Youtube, link: https://www.youtube.com/watch?v=7Y0BJz1j5zs 
+
 This README reproduces exactly what the Deliverable 2 video shows: the same notebook, the same input, the
 same baseline bubble on screen, and the same benchmark numbers.
 
