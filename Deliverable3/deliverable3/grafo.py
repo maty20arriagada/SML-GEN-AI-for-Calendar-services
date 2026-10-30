@@ -1,21 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-grafo.py - Motor de ejecución del grafo de agentes de Deliverable 3.
-Orquesta el flujo: A1 (Triage) -> A2 (Extractor) -> A3 (Temporal) -> A4 (Verificador).
+grafo.py - Punto de entrada del sistema de Deliverable 3.
+Según cfg["version"]: "v4" -> sistema de agentes (grafo_v4.ejecutar_v4), "v0" -> prompt directo E0;
+cfg["modo"] == "baseline" -> solución D2 (E1).
 """
 
 from __future__ import annotations
 
-import re
 from typing import Any, Dict, Tuple
 
-from deliverable3.agentes import (
-    BRAZOS,
-    AgenteExtractor,
-    AgenteTemporal,
-    AgenteTriage,
-    AgenteVerificador,
-)
+from deliverable3.agentes import BRAZOS, AgenteExtractor
 from deliverable3.tools import resolver_fecha
 from deliverable3.trazas import TrazaEjecucion
 
@@ -55,13 +49,13 @@ def ejecutar(
     fecha_ref: str = "2026-09-01",
 ) -> Tuple[Dict[str, Any], TrazaEjecucion]:
     """
-    Ejecuta el sistema multi-agente sobre una frase en lenguaje natural.
+    Ejecuta un brazo sobre una frase en lenguaje natural.
     Devuelve (evento_9_campos, traza_ejecucion).
     """
     if cfg is None:
-        cfg = BRAZOS["E2"]
+        cfg = BRAZOS["E4"]
 
-    # Brazos E4* y E0 (etapa 3): agentes con decisión en grafo_v4.py
+    # Brazos E4* y E0: agentes con decisión en grafo_v4.py
     if cfg.get("version") == "v4":
         from deliverable3.grafo_v4 import ejecutar_v4
         return ejecutar_v4(frase, cfg, motor, fecha_ref, _completar_contrato)
@@ -69,68 +63,21 @@ def ejecutar(
         from deliverable3.grafo_v4 import ejecutar_directo
         return ejecutar_directo(frase, cfg, motor, fecha_ref, _completar_contrato)
 
-    # Brazos E3* (etapa 2): flujo con A3/A4 v2 en grafo_v3.py
-    if cfg.get("version") == "v3":
-        from deliverable3.grafo_v3 import ejecutar_v3
-        return ejecutar_v3(frase, cfg, motor, fecha_ref, _completar_contrato)
-
-    traza = TrazaEjecucion(frase)
+    if cfg.get("modo") != "baseline":
+        raise ValueError(f"brazo desconocido: {cfg}")
 
     # -------------------------------------------------------------
     # Brazo E1: Baseline D2 (solución D2: prompt semántico + tool fecha)
     # -------------------------------------------------------------
-    if cfg.get("modo") == "baseline":
-        a2 = AgenteExtractor(motor)
-        sem = a2.extraer(frase, traza)
-        evento = dict(sem)
-        f_res = resolver_fecha(frase, fecha_ref)
-        evento["fecha"] = f_res
-        traza.registrar_tool("resolver_fecha", {"frase": frase, "fecha_ref": fecha_ref}, f_res)
-        evento["zona_horaria"] = "America/Santiago"
-        evento["recurrence"] = None
-        evento_final = _completar_contrato(evento)
-        traza.registrar_evento("BASELINE_D2", evento_final)
-        return evento_final, traza
-
-    # -------------------------------------------------------------
-    # Brazos E2 y ablaciones (Sistema Multi-Agente)
-    # -------------------------------------------------------------
-    
-    # 1. A1 - Triage
-    a1 = AgenteTriage(motor)
-    triage_info = a1.evaluar(frase, traza)
-    if not triage_info.get("continuar", True):
-        evento_vacio = _completar_contrato({})
-        traza.registrar_evento("RECHAZADO", evento_vacio)
-        return evento_vacio, traza
-
-    # 2. A2 - Extractor (LoRA)
+    traza = TrazaEjecucion(frase)
     a2 = AgenteExtractor(motor)
-    semantico = a2.extraer(frase, traza)
-
-    # 3. A3 - Temporal (con tools dinámicas T1)
-    con_tools = cfg.get("t1_tools", True)
-    a3 = AgenteTemporal(motor, con_tools=con_tools)
-    evento_temp = a3.resolver(frase, semantico, fecha_ref, traza)
-
-    # 4. A4 - Verificador y Crítico (T2 few-shot, T3 CoT)
-    usar_a4 = cfg.get("a4", True)
-    if usar_a4:
-        con_fewshot = cfg.get("t2_fewshot", True)
-        con_cot = cfg.get("t3_cot", True)
-        a4 = AgenteVerificador(motor, con_fewshot=con_fewshot, con_cot=con_cot)
-        evento_verif, estado = a4.auditar(frase, evento_temp, traza)
-    else:
-        # Ablación E2T4 (sin roles / bypass de A4)
-        evento_verif = evento_temp
-        estado = "APROBADO" if evento_verif.get("fecha") else "INCOMPLETO"
-        traza.registrar_agente("Bypass_A4", "A4 omitido por ablación E2T4")
-
-    # Adaptación de gramática (E2W vs E2)
-    if cfg.get("gramatica") == "v1":
-        # Gramática v1 congelada de D2
-        pass
-
-    evento_final = _completar_contrato(evento_verif)
-    traza.registrar_evento(estado, evento_final)
+    sem = a2.extraer(frase, traza)
+    evento = dict(sem)
+    f_res = resolver_fecha(frase, fecha_ref)
+    evento["fecha"] = f_res
+    traza.registrar_tool("resolver_fecha", {"frase": frase, "fecha_ref": fecha_ref}, f_res)
+    evento["zona_horaria"] = "America/Santiago"
+    evento["recurrence"] = None
+    evento_final = _completar_contrato(evento)
+    traza.registrar_evento("BASELINE_D2", evento_final)
     return evento_final, traza

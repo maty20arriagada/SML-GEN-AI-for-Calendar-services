@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 agentes_v3.py - Agentes de la etapa 3 (intento3). Cada agente es una llamada al modelo con rol y prompt
-propios que DECIDE qué pasa después; agentes.py / agentes_v2.py quedan intactos.
+propios que DECIDE qué pasa después.
 
 A1 Triage      : continuar | rechazar. Ve la señal de la herramienta detectar_expresion_temporal.
 A2 Extractor   : 6 campos semánticos (LoRA). Si la salida no es JSON, se revisa a sí mismo una vez.

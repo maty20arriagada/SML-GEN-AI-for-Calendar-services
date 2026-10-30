@@ -323,11 +323,10 @@ class TestGrafoE4(unittest.TestCase):
 
 
 class TestRegresion(unittest.TestCase):
-    def test_e1_e2_e3_siguen_intactos(self):
+    def test_e1_sigue_siendo_la_solucion_d2(self):
         from deliverable3.agentes import BRAZOS as B
-        self.assertEqual(B["E2"]["gramatica"], "v2")
-        self.assertEqual(B["E3"]["a3_version"], "v2")
-        self.assertNotIn("version", B["E2"])
+        self.assertEqual(B["E1"]["modo"], "baseline")
+        self.assertNotIn("version", B["E1"])
 
 
 if __name__ == "__main__":

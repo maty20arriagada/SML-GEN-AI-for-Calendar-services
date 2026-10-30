@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 benchmark_agentes.py - Orquestador de benchmarks y ablaciones para Deliverable 3.
-Permite evaluar E1 (baseline D2), E2 (sistema multi-agente) y ablaciones E2T1..E2T4, E2W.
+Evalúa E0 (prompt directo), E1 (solución D2), E4 (sistema de agentes) y las ablaciones E4T1..E4T5.
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ for _p in [_ROOT, _ROOT / "deliverable2"]:
 from deliverable3.agentes import BRAZOS as CFG_BRAZOS
 from deliverable3.grafo import ejecutar
 
-BRAZOS: List[str] = list(CFG_BRAZOS.keys())  # ["E1", "E2", "E2W", "E2T1", "E2T2", "E2T3", "E2T4"]
+BRAZOS: List[str] = list(CFG_BRAZOS.keys())  # ["E0", "E1", "E4", "E4T1", ..., "E4T5"]
 
 # Buscar dónde residen frases.json y benchmark_ft.json
 if (_ROOT / "frases.json").exists():

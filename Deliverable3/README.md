@@ -22,8 +22,8 @@ Hardware: Google Colab, Tesla T4 (15,6 GB), fp16.
 
 Código: `deliverable3/agentes_v3.py` (agentes), `deliverable3/grafo_v4.py` (orquestador con el bucle A4→A3 y el baseline E0),
 `deliverable3/tools.py` + `tools_v2.py` (herramientas deterministas), `deliverable3/trazas.py` (registro de mensajes).
-Prompts de las ablaciones: `a3_sin_tools_v1.txt` (T1), `a4_sin_fewshot_v1.txt` (T2), `a4_sin_cot_v1.txt` (T3). Los demás archivos de
-`prompts/` pertenecen a los intentos anteriores (E2/E3) y se conservan solo por reproducibilidad.
+`deliverable3/grafo.py` es el punto de entrada (`ejecutar(frase, cfg, motor)`) y además corre E1. Prompts de las ablaciones:
+`a3_sin_tools_v1.txt` (T1), `a4_sin_fewshot_v1.txt` (T2), `a4_sin_cot_v1.txt` (T3).
 
 ## Brazos y técnicas
 
@@ -68,7 +68,7 @@ queda un `.ics` de respaldo. Necesita un `credentials.json` propio (cliente OAut
 ## Probar el código sin GPU
 
 ```
-python -m unittest discover -s deliverable3/tests -t .        # 142 tests, modelo simulado
+python -m unittest discover -s deliverable3/tests -t .        # 105 tests, modelo simulado
 (cd deliverable2 && python -m unittest discover -s tests)     # 28 tests de D2
 python deliverable3/preparar_zip.py                           # regenera d3_proyecto.zip para Colab
 ```

@@ -52,12 +52,12 @@ class TestMotorConCache(unittest.TestCase):
         base = MotorContador()
         m = MotorConCache(base)
         frase = "Reunión con Ana el 10/09 a las 10:00"
-        r2, _ = ejecutar(frase, cfg=BRAZOS["E2"], motor=m, fecha_ref="2026-09-01")
-        llamadas_e2 = base.n
-        r3, _ = ejecutar(frase, cfg=BRAZOS["E3a"], motor=m, fecha_ref="2026-09-01")
-        self.assertEqual(llamadas_e2, 2)      # A1 + A2
-        self.assertEqual(base.n, 2)           # E3a no volvió a llamar al modelo
-        self.assertEqual(r2["fecha"], r3["fecha"])
+        r4, _ = ejecutar(frase, cfg=BRAZOS["E4"], motor=m, fecha_ref="2026-09-01")
+        llamadas_e4 = base.n
+        rt4, _ = ejecutar(frase, cfg=BRAZOS["E4T4"], motor=m, fecha_ref="2026-09-01")
+        self.assertGreater(llamadas_e4, 0)
+        self.assertEqual(base.n, llamadas_e4)   # E4T4 (A1, A2, A3 iguales y sin A4) no volvió a llamar al modelo
+        self.assertEqual(r4["fecha"], rt4["fecha"])
 
     def test_persistencia_en_disco(self):
         with tempfile.TemporaryDirectory() as d:
