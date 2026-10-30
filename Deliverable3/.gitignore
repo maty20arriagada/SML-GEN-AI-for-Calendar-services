@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+# credenciales de la demo con Google Calendar (cada uno usa las suyas)
+credentials.json
+token.json
+token*.pickle
+*.ics
+# auxiliares de LaTeX
+documento/*.aux
+documento/*.log
+documento/*.out
+documento/*.synctex.gz
+# d3_proyecto.zip se regenera con preparar_zip.py; la copia que se sube a Colab está en subir_a_colab/
+/d3_proyecto.zip

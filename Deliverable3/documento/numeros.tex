@@ -1,0 +1,190 @@
+\newcommand{\setres}[3]{\expandafter\def\csname R#1#2\endcsname{#3}}
+\newcommand{\R}[2]{\csname R#1#2\endcsname}
+\setres{E0}{A}{1 (1\%)}
+\setres{E0}{B}{4 (10\%)}
+\setres{E0}{C}{0 (0\%)}
+\setres{E0}{T}{5 (3\%)}
+\setres{E1}{A}{82 (88\%)}
+\setres{E1}{B}{20 (49\%)}
+\setres{E1}{C}{17 (65\%)}
+\setres{E1}{T}{119 (74\%)}
+\setres{E4}{A}{88 (95\%)}
+\setres{E4}{B}{38 (93\%)}
+\setres{E4}{C}{21 (81\%)}
+\setres{E4}{T}{147 (92\%)}
+\setres{E4T1}{A}{68 (73\%)}
+\setres{E4T1}{B}{32 (78\%)}
+\setres{E4T1}{C}{20 (77\%)}
+\setres{E4T1}{T}{120 (75\%)}
+\setres{E4T2}{A}{88 (95\%)}
+\setres{E4T2}{B}{38 (93\%)}
+\setres{E4T2}{C}{21 (81\%)}
+\setres{E4T2}{T}{147 (92\%)}
+\setres{E4T3}{A}{88 (95\%)}
+\setres{E4T3}{B}{38 (93\%)}
+\setres{E4T3}{C}{21 (81\%)}
+\setres{E4T3}{T}{147 (92\%)}
+\setres{E4T4}{A}{86 (92\%)}
+\setres{E4T4}{B}{34 (83\%)}
+\setres{E4T4}{C}{19 (73\%)}
+\setres{E4T4}{T}{139 (87\%)}
+\setres{E4T5}{A}{88 (95\%)}
+\setres{E4T5}{B}{38 (93\%)}
+\setres{E4T5}{C}{21 (81\%)}
+\setres{E4T5}{T}{147 (92\%)}
+\newcommand{\setpct}[3]{\expandafter\def\csname P#1#2\endcsname{#3}}\newcommand{\PCT}[2]{\csname P#1#2\endcsname}
+\setpct{E0}{A}{1}
+\setpct{E0}{B}{10}
+\setpct{E0}{C}{0}
+\setpct{E0}{T}{3}
+\setpct{E1}{A}{88}
+\setpct{E1}{B}{49}
+\setpct{E1}{C}{65}
+\setpct{E1}{T}{74}
+\setpct{E4}{A}{95}
+\setpct{E4}{B}{93}
+\setpct{E4}{C}{81}
+\setpct{E4}{T}{92}
+\setpct{E4T1}{A}{73}
+\setpct{E4T1}{B}{78}
+\setpct{E4T1}{C}{77}
+\setpct{E4T1}{T}{75}
+\setpct{E4T2}{A}{95}
+\setpct{E4T2}{B}{93}
+\setpct{E4T2}{C}{81}
+\setpct{E4T2}{T}{92}
+\setpct{E4T3}{A}{95}
+\setpct{E4T3}{B}{93}
+\setpct{E4T3}{C}{81}
+\setpct{E4T3}{T}{92}
+\setpct{E4T4}{A}{92}
+\setpct{E4T4}{B}{83}
+\setpct{E4T4}{C}{73}
+\setpct{E4T4}{T}{87}
+\setpct{E4T5}{A}{95}
+\setpct{E4T5}{B}{93}
+\setpct{E4T5}{C}{81}
+\setpct{E4T5}{T}{92}
+\newcommand{\setcls}[4]{\expandafter\def\csname CLS#1#2\endcsname{\heatcell{#3}{#4}}}\newcommand{\cls}[2]{\csname CLS#1#2\endcsname}
+\setcls{E0}{duracion_vs_recordatorio}{0}{7}
+\setcls{E0}{weekday_numero}{0}{4}
+\setcls{E0}{fecha_invalida}{4}{4}
+\setcls{E0}{ingles_relativo}{0}{5}
+\setcls{E0}{rol_compuesto}{0}{5}
+\setcls{E0}{complemento_titulo}{0}{6}
+\setcls{E0}{ampm}{0}{5}
+\setcls{E0}{control}{0}{5}
+\setcls{E1}{duracion_vs_recordatorio}{7}{7}
+\setcls{E1}{weekday_numero}{0}{4}
+\setcls{E1}{fecha_invalida}{1}{4}
+\setcls{E1}{ingles_relativo}{0}{5}
+\setcls{E1}{rol_compuesto}{3}{5}
+\setcls{E1}{complemento_titulo}{2}{6}
+\setcls{E1}{ampm}{2}{5}
+\setcls{E1}{control}{5}{5}
+\setcls{E4}{duracion_vs_recordatorio}{7}{7}
+\setcls{E4}{weekday_numero}{4}{4}
+\setcls{E4}{fecha_invalida}{4}{4}
+\setcls{E4}{ingles_relativo}{4}{5}
+\setcls{E4}{rol_compuesto}{3}{5}
+\setcls{E4}{complemento_titulo}{6}{6}
+\setcls{E4}{ampm}{5}{5}
+\setcls{E4}{control}{5}{5}
+\setcls{E4T1}{duracion_vs_recordatorio}{6}{7}
+\setcls{E4T1}{weekday_numero}{2}{4}
+\setcls{E4T1}{fecha_invalida}{4}{4}
+\setcls{E4T1}{ingles_relativo}{4}{5}
+\setcls{E4T1}{rol_compuesto}{2}{5}
+\setcls{E4T1}{complemento_titulo}{6}{6}
+\setcls{E4T1}{ampm}{4}{5}
+\setcls{E4T1}{control}{4}{5}
+\setcls{E4T2}{duracion_vs_recordatorio}{7}{7}
+\setcls{E4T2}{weekday_numero}{4}{4}
+\setcls{E4T2}{fecha_invalida}{4}{4}
+\setcls{E4T2}{ingles_relativo}{4}{5}
+\setcls{E4T2}{rol_compuesto}{3}{5}
+\setcls{E4T2}{complemento_titulo}{6}{6}
+\setcls{E4T2}{ampm}{5}{5}
+\setcls{E4T2}{control}{5}{5}
+\setcls{E4T3}{duracion_vs_recordatorio}{7}{7}
+\setcls{E4T3}{weekday_numero}{4}{4}
+\setcls{E4T3}{fecha_invalida}{4}{4}
+\setcls{E4T3}{ingles_relativo}{4}{5}
+\setcls{E4T3}{rol_compuesto}{3}{5}
+\setcls{E4T3}{complemento_titulo}{6}{6}
+\setcls{E4T3}{ampm}{5}{5}
+\setcls{E4T3}{control}{5}{5}
+\setcls{E4T4}{duracion_vs_recordatorio}{7}{7}
+\setcls{E4T4}{weekday_numero}{4}{4}
+\setcls{E4T4}{fecha_invalida}{4}{4}
+\setcls{E4T4}{ingles_relativo}{4}{5}
+\setcls{E4T4}{rol_compuesto}{3}{5}
+\setcls{E4T4}{complemento_titulo}{2}{6}
+\setcls{E4T4}{ampm}{5}{5}
+\setcls{E4T4}{control}{5}{5}
+\setcls{E4T5}{duracion_vs_recordatorio}{7}{7}
+\setcls{E4T5}{weekday_numero}{4}{4}
+\setcls{E4T5}{fecha_invalida}{4}{4}
+\setcls{E4T5}{ingles_relativo}{4}{5}
+\setcls{E4T5}{rol_compuesto}{3}{5}
+\setcls{E4T5}{complemento_titulo}{6}{6}
+\setcls{E4T5}{ampm}{5}{5}
+\setcls{E4T5}{control}{5}{5}
+\newcommand{\setdelta}[3]{\expandafter\def\csname D#1#2\endcsname{#3}}
+\newcommand{\dlt}[2]{\csname D#1#2\endcsname}
+\setdelta{E0}{A}{$-$87}
+\setdelta{E0}{B}{$-$34}
+\setdelta{E0}{C}{$-$21}
+\setdelta{E0}{T}{$-$142}
+\expandafter\def\csname BLE0\endcsname{4.26cm}
+\setdelta{E1}{A}{$-$6}
+\setdelta{E1}{B}{$-$18}
+\setdelta{E1}{C}{$-$4}
+\setdelta{E1}{T}{$-$28}
+\expandafter\def\csname BLE1\endcsname{0.84cm}
+\setdelta{E4}{A}{0}
+\setdelta{E4}{B}{0}
+\setdelta{E4}{C}{0}
+\setdelta{E4}{T}{0}
+\expandafter\def\csname BLE4\endcsname{0.00cm}
+\setdelta{E4T1}{A}{$-$20}
+\setdelta{E4T1}{B}{$-$6}
+\setdelta{E4T1}{C}{$-$1}
+\setdelta{E4T1}{T}{$-$27}
+\expandafter\def\csname BLE4T1\endcsname{0.81cm}
+\setdelta{E4T2}{A}{0}
+\setdelta{E4T2}{B}{0}
+\setdelta{E4T2}{C}{0}
+\setdelta{E4T2}{T}{0}
+\expandafter\def\csname BLE4T2\endcsname{0.00cm}
+\setdelta{E4T3}{A}{0}
+\setdelta{E4T3}{B}{0}
+\setdelta{E4T3}{C}{0}
+\setdelta{E4T3}{T}{0}
+\expandafter\def\csname BLE4T3\endcsname{0.00cm}
+\setdelta{E4T4}{A}{$-$2}
+\setdelta{E4T4}{B}{$-$4}
+\setdelta{E4T4}{C}{$-$2}
+\setdelta{E4T4}{T}{$-$8}
+\expandafter\def\csname BLE4T4\endcsname{0.24cm}
+\setdelta{E4T5}{A}{0}
+\setdelta{E4T5}{B}{0}
+\setdelta{E4T5}{C}{0}
+\setdelta{E4T5}{T}{0}
+\expandafter\def\csname BLE4T5\endcsname{0.00cm}
+\newcommand{\dlen}[1]{\csname BL#1\endcsname}
+\newcommand{\nA}{93}\newcommand{\nB}{41}\newcommand{\nC}{26}\newcommand{\nT}{160}
+\newcommand{\pValT}{$p<0.001$}\newcommand{\fixT}{31}\newcommand{\brokT}{3}
+\newcommand{\pValC}{$p=0.219$}\newcommand{\fixC}{5}\newcommand{\brokC}{1}
+\newcommand{\setchg}[2]{\expandafter\def\csname CHG#1\endcsname{#2}}\newcommand{\chg}[1]{\csname CHG#1\endcsname}
+\setchg{E4T1}{37}
+\setchg{E4T2}{0}
+\setchg{E4T3}{0}
+\setchg{E4T4}{8}
+\setchg{E4T5}{0}
+\newcommand{\fallbackrate}{0\%}\newcommand{\loopsrate}{4\%}
+\newcommand{\triagerej}{0}\newcommand{\corrN}{55}\newcommand{\corrRej}{45}
+\newcommand{\vramA}{8.74}\newcommand{\vramE}{8.12}\newcommand{\vramD}{0.62}
+\newcommand{\failinput}{\f{"Dinner with Tom at 7 pm New York time on October 9"} {\color{mute}(set C, id 20)}}
+\newcommand{\failwhy}{The phrase carried every value; three gaps lined up. \f{extraer\_zona\_horaria} knows only Madrid and Argentina and \emph{silently} returns the Santiago default instead of \f{null}. A3 trusted the tool over the phrase and spent its steps re-asking it, so the date tool was never called. A4 saw the wrong zone but chose \f{corregir} on a field outside its bounded fixes instead of returning the work to A3: no invented value got in, but the loop that would have caught it was not taken.}
+

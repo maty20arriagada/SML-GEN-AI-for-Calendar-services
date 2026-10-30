@@ -1,0 +1,20 @@
+{"tipo": "mensaje", "de": "Entrada", "a": "A1", "contenido": "Entrevista con el candidato a ingeniero el 8 de octubre a las 10:00"}
+{"tipo": "mensaje", "de": "A1", "a": "tool:detectar_expresion_temporal", "contenido": {"frase": "Entrevista con el candidato a ingeniero el 8 de octubre a las 10:00"}}
+{"tipo": "mensaje", "de": "tool:detectar_expresion_temporal", "a": "A1", "contenido": {"fecha": "2026-10-08", "hora_explicita": true, "fecha_invalida": false, "tiene_senal": true}}
+{"tipo": "agente", "agente": "A1_Triage", "salida": "Decisión: continuar. La frase menciona una fecha y hora específicas para una entrevista, lo que indica un evento agendable.", "accion": "continuar"}
+{"tipo": "mensaje", "de": "A1", "a": "A2", "contenido": {"accion": "continuar"}}
+{"tipo": "agente", "agente": "A2_Extractor", "salida": "{\"titulo\": \"Entrevista\", \"hora_inicio\": \"10:00\", \"duracion_minutos\": null, \"participantes\": [\"candidato\"], \"ubicacion\": null, \"recordatorio_minutos\": null}", "reintento": false}
+{"tipo": "mensaje", "de": "A2", "a": "A3", "contenido": {"titulo": "Entrevista", "hora_inicio": "10:00", "duracion_minutos": null, "participantes": ["candidato"], "ubicacion": null, "recordatorio_minutos": null}}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "paso 1: llamar ['resolver_fecha', 'normalizar_hora']. La frase menciona una fecha (8 de octubre) y una hora (10:00). Necesito resolver la fecha y normalizar la hora.", "accion": "llamar"}
+{"tipo": "mensaje", "de": "A3", "a": "tool:resolver_fecha", "contenido": {"frase": "Entrevista con el candidato a ingeniero el 8 de octubre a las 10:00"}}
+{"tipo": "mensaje", "de": "tool:resolver_fecha", "a": "A3", "contenido": "2026-10-08"}
+{"tipo": "mensaje", "de": "A3", "a": "tool:normalizar_hora", "contenido": {"frase": "Entrevista con el candidato a ingeniero el 8 de octubre a las 10:00"}}
+{"tipo": "mensaje", "de": "tool:normalizar_hora", "a": "A3", "contenido": "10:00"}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "paso 2: terminar. Ya tengo la fecha y hora. El borrador ya tiene el rol de 'candidato' como 'candidato a ingeniero'. No necesito más herramientas.", "accion": "terminar"}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "fin (terminar): herramientas ['resolver_fecha', 'normalizar_hora']", "respaldo": false, "herramientas": ["resolver_fecha", "normalizar_hora"], "guardia_terminar_vacio": false}
+{"tipo": "mensaje", "de": "A3", "a": "A4", "contenido": {"titulo": "Entrevista", "hora_inicio": "10:00", "duracion_minutos": null, "participantes": ["candidato"], "ubicacion": null, "recordatorio_minutos": null, "fecha": "2026-10-08", "zona_horaria": "America/Santiago", "recurrence": null}}
+{"tipo": "mensaje", "de": "A4", "a": "tool:validar_contrato", "contenido": {"frase": "Entrevista con el candidato a ingeniero el 8 de octubre a las 10:00"}}
+{"tipo": "mensaje", "de": "tool:validar_contrato", "a": "A4", "contenido": []}
+{"tipo": "agente", "agente": "A4_Verificador", "salida": "[aprobar] consistente", "accion": "aprobar", "vuelta": 1, "violaciones": [], "correcciones_rechazadas": [], "razonamiento": "El candidato es un participante legítimo, no un complemento del título. La fecha y hora coinciden con la frase."}
+{"tipo": "mensaje", "de": "A4", "a": "SALIDA", "contenido": {"accion": "aprobar", "motivo": "consistente"}}
+{"tipo": "evento", "estado": "APROBADO", "evento": {"titulo": "Entrevista", "fecha": "2026-10-08", "hora_inicio": "10:00", "duracion_minutos": null, "participantes": ["candidato"], "ubicacion": null, "recordatorio_minutos": null, "zona_horaria": "America/Santiago", "recurrence": null}}

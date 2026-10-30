@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "descripcion": "Conjunto independiente (C): frases redactadas sin conocer el sistema, sus resultados ni el análisis de errores, antes de correr los brazos E4. Mismo contrato de 8 campos y mismo criterio (evaluar.py). Convención de participantes: singular sin artículo, plural con artículo, como en benchmark_ft.json.",
+    "fecha_referencia": "2026-09-01",
+    "dia_referencia": "martes",
+    "total_frases": 26,
+    "categorias": {
+      "simple": "Fechas absolutas, campos básicos",
+      "con_participantes": "Incluye personas explícitas",
+      "ambigua": "Expresiones temporales relativas",
+      "compleja": "Múltiples campos a la vez",
+      "edge_case": "Info faltante, fecha u hora inválida, inglés, otra zona horaria",
+      "chat": "Mensajes informales estilo WhatsApp/Telegram"
+    }
+  },
+  "frases": [
+    {
+      "id": 1,
+      "categoria": "simple",
+      "texto": "Peluquería el 5 de octubre a las 16:00",
+      "ground_truth": {
+        "titulo": "Peluquería",
+        "fecha": "2026-10-05",
+        "hora_inicio": "16:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 2,
+      "categoria": "simple",
+      "texto": "Agenda clase de yoga el 9 de octubre a las 7:30 pm",
+      "ground_truth": {
+        "titulo": "Clase de yoga",
+        "fecha": "2026-10-09",
+        "hora_inicio": "19:30",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 3,
+      "categoria": "simple",
+      "texto": "Vacunación contra la influenza el 28/09 a las 9:15",
+      "ground_truth": {
+        "titulo": "Vacunación contra la influenza",
+        "fecha": "2026-09-28",
+        "hora_inicio": "09:15",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 4,
+      "categoria": "simple",
+      "texto": "Project deadline, November 3 at 23:59",
+      "ground_truth": {
+        "titulo": "Project deadline",
+        "fecha": "2026-11-03",
+        "hora_inicio": "23:59",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 5,
+      "categoria": "con_participantes",
+      "texto": "Almuerzo con Carmen el 12 de octubre a la 1:30 pm",
+      "ground_truth": {
+        "titulo": "Almuerzo",
+        "fecha": "2026-10-12",
+        "hora_inicio": "13:30",
+        "duracion_minutos": null,
+        "participantes": [
+          "Carmen"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 6,
+      "categoria": "con_participantes",
+      "texto": "Reunión con el contador el 30 de septiembre a las 16:00",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-30",
+        "hora_inicio": "16:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "contador"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 7,
+      "categoria": "con_participantes",
+      "texto": "Partido de fútbol con los compañeros del trabajo el sábado 19 de septiembre a las 11",
+      "ground_truth": {
+        "titulo": "Partido de fútbol",
+        "fecha": "2026-09-19",
+        "hora_inicio": "11:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "los compañeros del trabajo"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 8,
+      "categoria": "con_participantes",
+      "texto": "Cena con Sofía y Andrés el 23 de octubre a las 20:30",
+      "ground_truth": {
+        "titulo": "Cena",
+        "fecha": "2026-10-23",
+        "hora_inicio": "20:30",
+        "duracion_minutos": null,
+        "participantes": [
+          "Sofía",
+          "Andrés"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 9,
+      "categoria": "ambigua",
+      "texto": "Dentista pasado mañana a las 4",
+      "ground_truth": {
+        "titulo": "Dentista",
+        "fecha": "2026-09-03",
+        "hora_inicio": "16:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 10,
+      "categoria": "ambigua",
+      "texto": "Junta de apoderados el jueves de la próxima semana a las 7",
+      "ground_truth": {
+        "titulo": "Junta de apoderados",
+        "fecha": "2026-09-10",
+        "hora_inicio": "19:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 11,
+      "categoria": "ambigua",
+      "texto": "El 10 tengo control médico a las 8",
+      "ground_truth": {
+        "titulo": "Control médico",
+        "fecha": "2026-09-10",
+        "hora_inicio": "08:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 12,
+      "categoria": "ambigua",
+      "texto": "Misa el domingo a las 12",
+      "ground_truth": {
+        "titulo": "Misa",
+        "fecha": "2026-09-06",
+        "hora_inicio": "12:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 13,
+      "categoria": "compleja",
+      "texto": "Reunión de planificación con Valentina y el equipo de ventas el 6 de octubre de 15 a 17 en la sala Neptuno, avísame 30 minutos antes",
+      "ground_truth": {
+        "titulo": "Reunión de planificación",
+        "fecha": "2026-10-06",
+        "hora_inicio": "15:00",
+        "duracion_minutos": 120,
+        "participantes": [
+          "Valentina",
+          "equipo de ventas"
+        ],
+        "ubicacion": "sala Neptuno",
+        "recordatorio_minutos": 30,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 14,
+      "categoria": "compleja",
+      "texto": "Agéndame almuerzo de cumpleaños con los primos en La Pampa el 18 de octubre a las 14:00, dura 2 horas y media, recuérdame 1 hora antes",
+      "ground_truth": {
+        "titulo": "Almuerzo de cumpleaños",
+        "fecha": "2026-10-18",
+        "hora_inicio": "14:00",
+        "duracion_minutos": 150,
+        "participantes": [
+          "los primos"
+        ],
+        "ubicacion": "La Pampa",
+        "recordatorio_minutos": 60,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 15,
+      "categoria": "compleja",
+      "texto": "Defensa de tesis el 27 de noviembre a las 10 am en el auditorio B con la comisión, 90 minutos, avisar 2 horas antes",
+      "ground_truth": {
+        "titulo": "Defensa de tesis",
+        "fecha": "2026-11-27",
+        "hora_inicio": "10:00",
+        "duracion_minutos": 90,
+        "participantes": [
+          "comisión"
+        ],
+        "ubicacion": "auditorio B",
+        "recordatorio_minutos": 120,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 16,
+      "categoria": "compleja",
+      "texto": "Ensayo de la banda el miércoles 14 de octubre desde las 19:00 hasta las 21:30 en el garage de Pablo",
+      "ground_truth": {
+        "titulo": "Ensayo de la banda",
+        "fecha": "2026-10-14",
+        "hora_inicio": "19:00",
+        "duracion_minutos": 150,
+        "participantes": [],
+        "ubicacion": "garage de Pablo",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 17,
+      "categoria": "compleja",
+      "texto": "Schedule a call with Priya and the design team on Zoom, October 20 at 2 pm, 45 minutes, remind me 10 minutes before",
+      "ground_truth": {
+        "titulo": "Call",
+        "fecha": "2026-10-20",
+        "hora_inicio": "14:00",
+        "duracion_minutos": 45,
+        "participantes": [
+          "Priya",
+          "design team"
+        ],
+        "ubicacion": "Zoom",
+        "recordatorio_minutos": 10,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 18,
+      "categoria": "edge_case",
+      "texto": "Cita con el abogado el 31/11 a las 10:00",
+      "ground_truth": {
+        "titulo": "Cita",
+        "fecha": null,
+        "hora_inicio": "10:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "abogado"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 19,
+      "categoria": "edge_case",
+      "texto": "Reunión con el jefe mañana a las 25:00",
+      "ground_truth": {
+        "titulo": "Reunión",
+        "fecha": "2026-09-02",
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [
+          "jefe"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 20,
+      "categoria": "edge_case",
+      "texto": "Dinner with Tom at 7 pm New York time on October 9",
+      "ground_truth": {
+        "titulo": "Dinner",
+        "fecha": "2026-10-09",
+        "hora_inicio": "19:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "Tom"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/New_York"
+      }
+    },
+    {
+      "id": 21,
+      "categoria": "edge_case",
+      "texto": "Videollamada con el equipo de Madrid el 15 de octubre a las 10 am hora de Madrid",
+      "ground_truth": {
+        "titulo": "Videollamada",
+        "fecha": "2026-10-15",
+        "hora_inicio": "10:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "equipo de Madrid"
+        ],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "Europe/Madrid"
+      }
+    },
+    {
+      "id": 22,
+      "categoria": "edge_case",
+      "texto": "Remind me to call the bank",
+      "ground_truth": {
+        "titulo": "Call the bank",
+        "fecha": null,
+        "hora_inicio": null,
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 23,
+      "categoria": "chat",
+      "texto": "oye mañana tengo q ir al medico a las 5 no me dejes olvidar, avisame 20 min antes",
+      "ground_truth": {
+        "titulo": "Médico",
+        "fecha": "2026-09-02",
+        "hora_inicio": "17:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": 20,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 24,
+      "categoria": "chat",
+      "texto": "pizza con los cabros el vie 11/09 a las 9 pm en casa del Nico",
+      "ground_truth": {
+        "titulo": "Pizza",
+        "fecha": "2026-09-11",
+        "hora_inicio": "21:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "los cabros"
+        ],
+        "ubicacion": "casa del Nico",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 25,
+      "categoria": "chat",
+      "texto": "Meeting con el cliente el martes a las 3pm x zoom",
+      "ground_truth": {
+        "titulo": "Meeting",
+        "fecha": "2026-09-08",
+        "hora_inicio": "15:00",
+        "duracion_minutos": null,
+        "participantes": [
+          "cliente"
+        ],
+        "ubicacion": "Zoom",
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    },
+    {
+      "id": 26,
+      "categoria": "chat",
+      "texto": "gym session el sab 24 oct a las 7am, q no se me pase",
+      "ground_truth": {
+        "titulo": "Gym session",
+        "fecha": "2026-10-24",
+        "hora_inicio": "07:00",
+        "duracion_minutos": null,
+        "participantes": [],
+        "ubicacion": null,
+        "recordatorio_minutos": null,
+        "zona_horaria": "America/Santiago"
+      }
+    }
+  ]
+}

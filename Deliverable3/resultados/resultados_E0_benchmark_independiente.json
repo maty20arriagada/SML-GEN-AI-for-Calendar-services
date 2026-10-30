@@ -1,0 +1,463 @@
+[
+  {
+    "id": 1,
+    "texto": "Peluquería el 5 de octubre a las 16:00",
+    "resultado_modelo": {
+      "titulo": "Peluquería",
+      "fecha": "2023-10-05",
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.57,
+    "json_valido": true
+  },
+  {
+    "id": 2,
+    "texto": "Agenda clase de yoga el 9 de octubre a las 7:30 pm",
+    "resultado_modelo": {
+      "titulo": "clase de yoga",
+      "fecha": "2023-10-09",
+      "hora_inicio": "19:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.53,
+    "json_valido": true
+  },
+  {
+    "id": 3,
+    "texto": "Vacunación contra la influenza el 28/09 a las 9:15",
+    "resultado_modelo": {
+      "titulo": "Vacunación contra la influenza",
+      "fecha": "2028-09-28",
+      "hora_inicio": "09:15",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.78,
+    "json_valido": true
+  },
+  {
+    "id": 4,
+    "texto": "Project deadline, November 3 at 23:59",
+    "resultado_modelo": {
+      "titulo": "Project deadline",
+      "fecha": null,
+      "hora_inicio": "23:59",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 4.88,
+    "json_valido": true
+  },
+  {
+    "id": 5,
+    "texto": "Almuerzo con Carmen el 12 de octubre a la 1:30 pm",
+    "resultado_modelo": {
+      "titulo": "Almuerzo con Carmen",
+      "fecha": "2023-10-12",
+      "hora_inicio": "13:30",
+      "duracion_minutos": null,
+      "participantes": [
+        "Carmen"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.01,
+    "json_valido": true
+  },
+  {
+    "id": 6,
+    "texto": "Reunión con el contador el 30 de septiembre a las 16:00",
+    "resultado_modelo": {
+      "titulo": "Reunión con el contador",
+      "fecha": "2023-09-30",
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.73,
+    "json_valido": true
+  },
+  {
+    "id": 7,
+    "texto": "Partido de fútbol con los compañeros del trabajo el sábado 19 de septiembre a las 11",
+    "resultado_modelo": {
+      "titulo": "Partido de fútbol con los compañeros del trabajo",
+      "fecha": "2023-09-19",
+      "hora_inicio": "11:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.14,
+    "json_valido": true
+  },
+  {
+    "id": 8,
+    "texto": "Cena con Sofía y Andrés el 23 de octubre a las 20:30",
+    "resultado_modelo": {
+      "titulo": "Cena con Sofía y Andrés",
+      "fecha": "2023-10-23",
+      "hora_inicio": "20:30",
+      "duracion_minutos": null,
+      "participantes": [
+        "Sofía",
+        "Andrés"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.22,
+    "json_valido": true
+  },
+  {
+    "id": 9,
+    "texto": "Dentista pasado mañana a las 4",
+    "resultado_modelo": {
+      "titulo": "Dentista",
+      "fecha": null,
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 4.93,
+    "json_valido": true
+  },
+  {
+    "id": 10,
+    "texto": "Junta de apoderados el jueves de la próxima semana a las 7",
+    "resultado_modelo": {
+      "titulo": "Junta de apoderados",
+      "fecha": null,
+      "hora_inicio": "19:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.06,
+    "json_valido": true
+  },
+  {
+    "id": 11,
+    "texto": "El 10 tengo control médico a las 8",
+    "resultado_modelo": {
+      "titulo": "Control médico",
+      "fecha": "2024-10-10",
+      "hora_inicio": "08:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.53,
+    "json_valido": true
+  },
+  {
+    "id": 12,
+    "texto": "Misa el domingo a las 12",
+    "resultado_modelo": {
+      "titulo": "Misa",
+      "fecha": null,
+      "hora_inicio": "12:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 4.93,
+    "json_valido": true
+  },
+  {
+    "id": 13,
+    "texto": "Reunión de planificación con Valentina y el equipo de ventas el 6 de octubre de 15 a 17 en la sala Neptuno, avísame 30 minutos antes",
+    "resultado_modelo": {
+      "titulo": "Reunión de planificación",
+      "fecha": "2023-10-06",
+      "hora_inicio": "15:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Valentina",
+        "equipo de ventas"
+      ],
+      "ubicacion": "sala Neptuno",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.7,
+    "json_valido": true
+  },
+  {
+    "id": 14,
+    "texto": "Agéndame almuerzo de cumpleaños con los primos en La Pampa el 18 de octubre a las 14:00, dura 2 horas y media, recuérdame 1 hora antes",
+    "resultado_modelo": {
+      "titulo": "Almuerzo de cumpleaños con los primos",
+      "fecha": "2023-10-18",
+      "hora_inicio": "14:00",
+      "duracion_minutos": 150,
+      "participantes": [
+        "los primos"
+      ],
+      "ubicacion": "La Pampa",
+      "recordatorio_minutos": 60,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 7.04,
+    "json_valido": true
+  },
+  {
+    "id": 15,
+    "texto": "Defensa de tesis el 27 de noviembre a las 10 am en el auditorio B con la comisión, 90 minutos, avisar 2 horas antes",
+    "resultado_modelo": {
+      "titulo": "Defensa de tesis",
+      "fecha": "2023-11-27",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 90,
+      "participantes": [
+        "comisión"
+      ],
+      "ubicacion": "auditorio B",
+      "recordatorio_minutos": 120,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.43,
+    "json_valido": true
+  },
+  {
+    "id": 16,
+    "texto": "Ensayo de la banda el miércoles 14 de octubre desde las 19:00 hasta las 21:30 en el garage de Pablo",
+    "resultado_modelo": {
+      "titulo": "Ensayo de la banda",
+      "fecha": "2023-10-14",
+      "hora_inicio": "19:00",
+      "duracion_minutos": 150,
+      "participantes": [],
+      "ubicacion": "garage de Pablo",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.28,
+    "json_valido": true
+  },
+  {
+    "id": 17,
+    "texto": "Schedule a call with Priya and the design team on Zoom, October 20 at 2 pm, 45 minutes, remind me 10 minutes before",
+    "resultado_modelo": {
+      "titulo": "Call with Priya and the design team",
+      "fecha": "2023-10-20",
+      "hora_inicio": "14:00",
+      "duracion_minutos": 45,
+      "participantes": [
+        "Priya",
+        "design team"
+      ],
+      "ubicacion": "Zoom",
+      "recordatorio_minutos": 10,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.67,
+    "json_valido": true
+  },
+  {
+    "id": 18,
+    "texto": "Cita con el abogado el 31/11 a las 10:00",
+    "resultado_modelo": {
+      "titulo": "Cita con el abogado",
+      "fecha": null,
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.79,
+    "json_valido": true
+  },
+  {
+    "id": 19,
+    "texto": "Reunión con el jefe mañana a las 25:00",
+    "resultado_modelo": {
+      "titulo": "Reunión con el jefe",
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 4.98,
+    "json_valido": true
+  },
+  {
+    "id": 20,
+    "texto": "Dinner with Tom at 7 pm New York time on October 9",
+    "resultado_modelo": {
+      "titulo": "Dinner with Tom",
+      "fecha": "2023-10-09",
+      "hora_inicio": "19:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Tom"
+      ],
+      "ubicacion": "New York",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.88,
+    "json_valido": true
+  },
+  {
+    "id": 21,
+    "texto": "Videollamada con el equipo de Madrid el 15 de octubre a las 10 am hora de Madrid",
+    "resultado_modelo": {
+      "titulo": "Videollamada con el equipo de Madrid",
+      "fecha": "2023-10-15",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": "videollamada",
+      "recordatorio_minutos": null,
+      "zona_horaria": "Europe/Madrid",
+      "recurrence": null
+    },
+    "segundos": 6.18,
+    "json_valido": true
+  },
+  {
+    "id": 22,
+    "texto": "Remind me to call the bank",
+    "resultado_modelo": {
+      "titulo": null,
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 4.51,
+    "json_valido": true
+  },
+  {
+    "id": 23,
+    "texto": "oye mañana tengo q ir al medico a las 5 no me dejes olvidar, avisame 20 min antes",
+    "resultado_modelo": {
+      "titulo": "ir al medico",
+      "fecha": null,
+      "hora_inicio": "17:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": 20,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.13,
+    "json_valido": true
+  },
+  {
+    "id": 24,
+    "texto": "pizza con los cabros el vie 11/09 a las 9 pm en casa del Nico",
+    "resultado_modelo": {
+      "titulo": "pizza con los cabros",
+      "fecha": "2023-09-11",
+      "hora_inicio": "21:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "los cabros"
+      ],
+      "ubicacion": "casa del Nico",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 6.2,
+    "json_valido": true
+  },
+  {
+    "id": 25,
+    "texto": "Meeting con el cliente el martes a las 3pm x zoom",
+    "resultado_modelo": {
+      "titulo": "Meeting con el cliente",
+      "fecha": null,
+      "hora_inicio": "15:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": "x zoom",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.02,
+    "json_valido": true
+  },
+  {
+    "id": 26,
+    "texto": "gym session el sab 24 oct a las 7am, q no se me pase",
+    "resultado_modelo": {
+      "titulo": "gym session",
+      "fecha": "2024-10-24",
+      "hora_inicio": "19:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 5.56,
+    "json_valido": true
+  }
+]

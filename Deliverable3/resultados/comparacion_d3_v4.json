@@ -1,0 +1,447 @@
+{
+  "tabla": [
+    {
+      "grupo": "A (93)",
+      "brazo": "E0",
+      "correctos": 1,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 81,
+        "E0_gana": 0,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E1",
+      "correctos": 82,
+      "total": 93
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4",
+      "correctos": 88,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 2,
+        "E4_gana": 8,
+        "p": 0.1094
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4T1",
+      "correctos": 68,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 20,
+        "E4T1_gana": 6,
+        "p": 0.0094
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 20,
+        "E4T1_gana": 0,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4T2",
+      "correctos": 88,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 2,
+        "E4T2_gana": 8,
+        "p": 0.1094
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T2_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4T3",
+      "correctos": 88,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 2,
+        "E4T3_gana": 8,
+        "p": 0.1094
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T3_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4T4",
+      "correctos": 86,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 2,
+        "E4T4_gana": 6,
+        "p": 0.2891
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 2,
+        "E4T4_gana": 0,
+        "p": 0.5
+      }
+    },
+    {
+      "grupo": "A (93)",
+      "brazo": "E4T5",
+      "correctos": 88,
+      "total": 93,
+      "vs_E1": {
+        "E1_gana": 2,
+        "E4T5_gana": 8,
+        "p": 0.1094
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T5_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E0",
+      "correctos": 4,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 19,
+        "E0_gana": 3,
+        "p": 0.0009
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E1",
+      "correctos": 20,
+      "total": 41
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4",
+      "correctos": 38,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 0,
+        "E4_gana": 18,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4T1",
+      "correctos": 32,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 4,
+        "E4T1_gana": 16,
+        "p": 0.0118
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 6,
+        "E4T1_gana": 0,
+        "p": 0.0312
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4T2",
+      "correctos": 38,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 0,
+        "E4T2_gana": 18,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T2_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4T3",
+      "correctos": 38,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 0,
+        "E4T3_gana": 18,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T3_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4T4",
+      "correctos": 34,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 0,
+        "E4T4_gana": 14,
+        "p": 0.0001
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 4,
+        "E4T4_gana": 0,
+        "p": 0.125
+      }
+    },
+    {
+      "grupo": "B (41)",
+      "brazo": "E4T5",
+      "correctos": 38,
+      "total": 41,
+      "vs_E1": {
+        "E1_gana": 0,
+        "E4T5_gana": 18,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T5_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E0",
+      "correctos": 0,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 17,
+        "E0_gana": 0,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E1",
+      "correctos": 17,
+      "total": 26
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4",
+      "correctos": 21,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 1,
+        "E4_gana": 5,
+        "p": 0.2188
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4T1",
+      "correctos": 20,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4T1_gana": 6,
+        "p": 0.5078
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 3,
+        "E4T1_gana": 2,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4T2",
+      "correctos": 21,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 1,
+        "E4T2_gana": 5,
+        "p": 0.2188
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T2_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4T3",
+      "correctos": 21,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 1,
+        "E4T3_gana": 5,
+        "p": 0.2188
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T3_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4T4",
+      "correctos": 19,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 1,
+        "E4T4_gana": 3,
+        "p": 0.625
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 2,
+        "E4T4_gana": 0,
+        "p": 0.5
+      }
+    },
+    {
+      "grupo": "C (26, independiente)",
+      "brazo": "E4T5",
+      "correctos": 21,
+      "total": 26,
+      "vs_E1": {
+        "E1_gana": 1,
+        "E4T5_gana": 5,
+        "p": 0.2188
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T5_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E0",
+      "correctos": 5,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 117,
+        "E0_gana": 3,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E1",
+      "correctos": 119,
+      "total": 160
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4",
+      "correctos": 147,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4_gana": 31,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4T1",
+      "correctos": 120,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 27,
+        "E4T1_gana": 28,
+        "p": 1.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 29,
+        "E4T1_gana": 2,
+        "p": 0.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4T2",
+      "correctos": 147,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4T2_gana": 31,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T2_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4T3",
+      "correctos": 147,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4T3_gana": 31,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T3_gana": 0,
+        "p": 1.0
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4T4",
+      "correctos": 139,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4T4_gana": 23,
+        "p": 0.0001
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 8,
+        "E4T4_gana": 0,
+        "p": 0.0078
+      }
+    },
+    {
+      "grupo": "TOTAL (160)",
+      "brazo": "E4T5",
+      "correctos": 147,
+      "total": 160,
+      "vs_E1": {
+        "E1_gana": 3,
+        "E4T5_gana": 31,
+        "p": 0.0
+      },
+      "E4_vs_ablacion": {
+        "E4_gana": 0,
+        "E4T5_gana": 0,
+        "p": 1.0
+      }
+    }
+  ],
+  "agentes_E4": {
+    "A1_rechazos": 0,
+    "A2_reintentos": 0,
+    "A3_respaldo": 0,
+    "A3_pasos_promedio": 2.29,
+    "A4_aprobar": 105,
+    "A4_corregir": 55,
+    "A4_devolver_a_A3": 7,
+    "A4_correcciones_rechazadas": 46,
+    "inputs": 160
+  }
+}

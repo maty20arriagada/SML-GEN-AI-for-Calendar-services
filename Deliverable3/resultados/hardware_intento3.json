@@ -1,0 +1,15 @@
+{
+  "gpu": "Tesla T4",
+  "vram_gb": 15.6,
+  "vram_max_E0_modelo_base_gb": 8.12,
+  "vram_max_agentes_gb": 8.74,
+  "modelo": "Qwen/Qwen3-4B-Instruct-2507",
+  "adapter": "/content/adapter",
+  "dtype": "float16",
+  "plataforma": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.17.0",
+  "peft": "0.21.0",
+  "llamadas_modelo_E4_y_ablaciones": 1269,
+  "aciertos_cache": 3410
+}

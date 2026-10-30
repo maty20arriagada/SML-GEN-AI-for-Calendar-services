@@ -1,0 +1,20 @@
+{"tipo": "mensaje", "de": "Entrada", "a": "A1", "contenido": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes"}
+{"tipo": "mensaje", "de": "A1", "a": "tool:detectar_expresion_temporal", "contenido": {"frase": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes"}}
+{"tipo": "mensaje", "de": "tool:detectar_expresion_temporal", "a": "A1", "contenido": {"fecha": "2026-09-10", "hora_explicita": true, "fecha_invalida": false, "tiene_senal": true}}
+{"tipo": "agente", "agente": "A1_Triage", "salida": "Decisión: continuar. La frase menciona una fecha y hora específicas para una reunión de sincronización, lo que indica un evento que debe ser agendado.", "accion": "continuar"}
+{"tipo": "mensaje", "de": "A1", "a": "A2", "contenido": {"accion": "continuar"}}
+{"tipo": "agente", "agente": "A2_Extractor", "salida": "{\"titulo\": \"reunión de sincronización\", \"hora_inicio\": \"14:00\", \"duracion_minutos\": null, \"participantes\": [], \"ubicacion\": null, \"recordatorio_minutos\": 15}", "reintento": false}
+{"tipo": "mensaje", "de": "A2", "a": "A3", "contenido": {"titulo": "reunión de sincronización", "hora_inicio": "14:00", "duracion_minutos": null, "participantes": [], "ubicacion": null, "recordatorio_minutos": 15}}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "paso 1: llamar ['resolver_fecha', 'normalizar_hora']. La frase menciona una fecha (10) y una hora (14), así como un aviso previo de 15 minutos. Necesito verificar la fecha y la hora.", "accion": "llamar"}
+{"tipo": "mensaje", "de": "A3", "a": "tool:resolver_fecha", "contenido": {"frase": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes"}}
+{"tipo": "mensaje", "de": "tool:resolver_fecha", "a": "A3", "contenido": "2026-09-10"}
+{"tipo": "mensaje", "de": "A3", "a": "tool:normalizar_hora", "contenido": {"frase": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes"}}
+{"tipo": "mensaje", "de": "tool:normalizar_hora", "a": "A3", "contenido": "14:00"}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "paso 2: terminar. Ya tengo la fecha, hora y recordatorio. No hay más información necesaria.", "accion": "terminar"}
+{"tipo": "agente", "agente": "A3_Temporal", "salida": "fin (terminar): herramientas ['resolver_fecha', 'normalizar_hora']", "respaldo": false, "herramientas": ["resolver_fecha", "normalizar_hora"], "guardia_terminar_vacio": false}
+{"tipo": "mensaje", "de": "A3", "a": "A4", "contenido": {"titulo": "reunión de sincronización", "hora_inicio": "14:00", "duracion_minutos": null, "participantes": [], "ubicacion": null, "recordatorio_minutos": 15, "fecha": "2026-09-10", "zona_horaria": "America/Santiago", "recurrence": null}}
+{"tipo": "mensaje", "de": "A4", "a": "tool:validar_contrato", "contenido": {"frase": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes"}}
+{"tipo": "mensaje", "de": "tool:validar_contrato", "a": "A4", "contenido": []}
+{"tipo": "agente", "agente": "A4_Verificador", "salida": "[aprobar] todo concuerda con la frase", "accion": "aprobar", "vuelta": 1, "violaciones": [], "correcciones_rechazadas": [], "razonamiento": "La frase menciona 'avísame 15 min antes', lo cual se traduce en recordatorio de 15 minutos, y el evento ya tiene recordatorio_minutos = 15. La fecha '10' se interpreta como 10 de septiembre de 2026, que es válida. No hay violaciones en el reporte y todos los campos coinciden con la frase."}
+{"tipo": "mensaje", "de": "A4", "a": "SALIDA", "contenido": {"accion": "aprobar", "motivo": "todo concuerda con la frase"}}
+{"tipo": "evento", "estado": "APROBADO", "evento": {"titulo": "reunión de sincronización", "fecha": "2026-09-10", "hora_inicio": "14:00", "duracion_minutos": null, "participantes": [], "ubicacion": null, "recordatorio_minutos": 15, "zona_horaria": "America/Santiago", "recurrence": null}}

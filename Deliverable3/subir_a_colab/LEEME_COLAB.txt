@@ -1,0 +1,55 @@
+========================================================================
+GUIA RAPIDA: QUE ARCHIVOS SUBIR EN GOOGLE COLAB  (INTENTO 3 - AGENTES)
+========================================================================
+
+Esta carpeta contiene EXACTAMENTE lo que te pide el notebook 'deliverable3_colab.ipynb':
+
+    d3_proyecto.zip               codigo + prompts + los 4 benchmarks (124 tests)
+    adapter_config.json           adapter LoRA checkpoint-300 (el mismo de D2)
+    adapter_model.safetensors     (~132 MB)
+    d3_previos.zip                E1 ya medido en los conjuntos A y B + cache del modelo
+                                  (asi A2 da lo mismo que en el intento 2 y no se repite)
+
+Se corre: E0 (prompt directo, modelo base), E4 (agentes) y las 5 ablaciones sobre
+160 inputs, y E1 solo sobre el conjunto C (26 frases independientes).
+Tiempo estimado: 1,5 a 2 horas en T4. Es REANUDABLE.
+
+------------------------------------------------------------------------
+PASO 1: ABRIR EL NOTEBOOK
+------------------------------------------------------------------------
+1. https://colab.research.google.com/  ->  abre 'deliverable3_colab.ipynb'
+2. Entorno de ejecucion -> Cambiar tipo de entorno -> 'T4 GPU'
+
+PASO 2: CELDA 1 (DEPENDENCIAS)         instala transformers, peft, accelerate. Debe decir 'GPU OK'.
+PASO 3: CELDA 2 (CODIGO)               SUBE: d3_proyecto.zip
+PASO 4: CELDA 3 (TESTS)                124 + 28 tests en ~2 s. Si alguno falla, no sigas.
+PASO 5: CELDA 4 (ADAPTER)              SUBE JUNTOS: adapter_config.json y adapter_model.safetensors
+PASO 6: CELDA 5 (PREVIOS)              SUBE: d3_previos.zip. Pide montar Google Drive (USAR_DRIVE = True):
+                                       acepta; asi los resultados quedan en tu Drive (d3_intento3_resultados/)
+                                       y sobreviven si Colab se cae.
+PASO 7: CELDA 6 (E0, MODELO BASE)      carga el modelo SIN LoRA, corre el prompt directo en los 160
+                                       inputs (~15-20 min) y libera la GPU.
+PASO 8: CELDA 7 (MODELO + LORA)        carga el modelo con el adapter (~1-4 min) y el cache.
+PASO 9: CELDA 8 (SMOKE)                2 frases con los mensajes entre agentes visibles. Revisa que:
+                                       - A3 haya llamado herramientas ("llamar [...]") y luego "terminar"
+                                       - A4 haya decidido (aprobar / corregir / devolver_a_A3)
+                                       Si A3 queda en "respuesta no usable" varias veces, avisa antes de seguir.
+PASO 9b: CELDA 8b (PRE-VUELO)          corre 12 frases (~3 min) y dice 'PRE-VUELO OK' o 'CON ALERTA'.
+                                       Con ALERTA no sigas: copia la salida (celdas 8 y 8b) para revisarla antes
+                                       de gastar la corrida completa.
+PASO 10: CELDA DEMO (VIDEO)            3 inputs reales (uno por conjunto) con E1 al lado. Es lo que se
+                                       graba en el video (max. 3 min): hacer zoom a los mensajes entre agentes.
+PASO 11: CELDA 9 (CORRIDA)             E4, E4T4, E4T5, E4T2, E4T3, E4T1 y E1 sobre C. Reanudable: si se
+                                       corta, vuelve a correr las celdas 6 (salta E0), 7 y 9.
+PASO 12: CELDA 10 (RESULTADOS)          tabla de aciertos, McNemar, comportamiento de los agentes y las
+                                       frases que E4 aun falla. Guarda comparacion_d3_v4.json.
+PASO 13: CELDA 11 (DESCARGA)           baja 'd3_resultados_intento3.zip'. Guardalo en la carpeta 'intento3'.
+
+------------------------------------------------------------------------
+IMPORTANTE
+------------------------------------------------------------------------
+- Si Colab reinicia el entorno se pierden los archivos: descarga el zip (celda 11) al terminar cada sesion.
+- 'segundos' por frase NO incluye A1/A2 en los brazos que reutilizan el cache; solo el primer brazo
+  (E4) paga el modelo completo.
+- Con el zip de resultados en la carpeta, se rellenan el PDF (documento/deliverable3.tex) y el README.
+========================================================================

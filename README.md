@@ -4,6 +4,10 @@
 
 Matias Arriagada, Cristián Cárdenas, Pablo Silva y Daniela Vidal.
 
+## Deliverable 3 (sistema de agentes)
+
+La entrega del Deliverable 3 está en [`Deliverable3/`](Deliverable3/): ver su [`README.md`](Deliverable3/README.md) (agentes, prompts versionados, resultados, trazas y cómo reproducir el video) y el documento `Deliverable3/documento/deliverable3.pdf`.
+
 ## Tarea
 
 Convertir mensajes naturales en español e inglés, incluidos mensajes informales,

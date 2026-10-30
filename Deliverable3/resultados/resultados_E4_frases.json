@@ -1,0 +1,807 @@
+[
+  {
+    "id": 1,
+    "texto": "Reunión el 4 de septiembre a las 9 am",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-04",
+      "hora_inicio": "09:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 2,
+    "texto": "Cita médica el 15 de septiembre a las 10:30",
+    "resultado_modelo": {
+      "titulo": "Cita médica",
+      "fecha": "2026-09-15",
+      "hora_inicio": "10:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 3,
+    "texto": "Junta el 7 de septiembre a las 16:00",
+    "resultado_modelo": {
+      "titulo": "Junta",
+      "fecha": "2026-09-07",
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 4,
+    "texto": "Meeting on September 8th at 2pm",
+    "resultado_modelo": {
+      "titulo": "Meeting",
+      "fecha": "2026-09-08",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 5,
+    "texto": "Entrevista el 10/09 a las 11:15",
+    "resultado_modelo": {
+      "titulo": "Entrevista",
+      "fecha": "2026-09-10",
+      "hora_inicio": "11:15",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 6,
+    "texto": "Taller el sábado 12 de septiembre a las 3 de la tarde",
+    "resultado_modelo": {
+      "titulo": "Taller",
+      "fecha": "2026-09-12",
+      "hora_inicio": "15:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 7,
+    "texto": "Presentación el 3 de septiembre a las 8:00",
+    "resultado_modelo": {
+      "titulo": "Presentación",
+      "fecha": "2026-09-03",
+      "hora_inicio": "08:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 8,
+    "texto": "Sesión de fotos el 11 de septiembre a las 17:30",
+    "resultado_modelo": {
+      "titulo": "Sesión de fotos",
+      "fecha": "2026-09-11",
+      "hora_inicio": "17:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 9,
+    "texto": "Reunión con Ana y Pedro el 2 de septiembre a las 10",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-02",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Ana",
+        "Pedro"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 10,
+    "texto": "Junta con el equipo de ventas el jueves 10 de septiembre a las 15:30",
+    "resultado_modelo": {
+      "titulo": "Junta",
+      "fecha": "2026-09-10",
+      "hora_inicio": "15:30",
+      "duracion_minutos": null,
+      "participantes": [
+        "equipo de ventas"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 11,
+    "texto": "Llamada con el cliente el 4 de septiembre a las 11",
+    "resultado_modelo": {
+      "titulo": "Llamada",
+      "fecha": "2026-09-04",
+      "hora_inicio": "11:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "cliente"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 12,
+    "texto": "Almuerzo con María el viernes a las 13:00",
+    "resultado_modelo": {
+      "titulo": "Almuerzo",
+      "fecha": "2026-09-04",
+      "hora_inicio": "13:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "María"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 13,
+    "texto": "Reunión con Dani y el profe el 8 de septiembre a las 9:30",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-08",
+      "hora_inicio": "09:30",
+      "duracion_minutos": null,
+      "participantes": [
+        "Dani",
+        "el profe"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 18.58,
+    "json_valido": true
+  },
+  {
+    "id": 14,
+    "texto": "Café con Juan y Carla el lunes a las 17:00",
+    "resultado_modelo": {
+      "titulo": "Café",
+      "fecha": "2026-09-07",
+      "hora_inicio": "17:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Juan",
+        "Carla"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 22.85,
+    "json_valido": true
+  },
+  {
+    "id": 15,
+    "texto": "Review con los desarrolladores el 10 de septiembre a las 14:00",
+    "resultado_modelo": {
+      "titulo": "Review",
+      "fecha": "2026-09-10",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "los desarrolladores"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 16.89,
+    "json_valido": true
+  },
+  {
+    "id": 16,
+    "texto": "Reunión mañana a las 10",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-02",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 19.49,
+    "json_valido": true
+  },
+  {
+    "id": 17,
+    "texto": "Junta el lunes a las 9",
+    "resultado_modelo": {
+      "titulo": "Junta",
+      "fecha": "2026-09-07",
+      "hora_inicio": "09:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 37.8,
+    "json_valido": true
+  },
+  {
+    "id": 18,
+    "texto": "Entrevista pasado mañana a las 15:30",
+    "resultado_modelo": {
+      "titulo": "Entrevista",
+      "fecha": "2026-09-03",
+      "hora_inicio": "15:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 16.78,
+    "json_valido": true
+  },
+  {
+    "id": 19,
+    "texto": "Clase el viernes a las 8:30",
+    "resultado_modelo": {
+      "titulo": "Clase",
+      "fecha": "2026-09-04",
+      "hora_inicio": "08:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 17.03,
+    "json_valido": true
+  },
+  {
+    "id": 20,
+    "texto": "Reunión el miércoles de la próxima semana a las 11",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-09",
+      "hora_inicio": "11:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 43.47,
+    "json_valido": true
+  },
+  {
+    "id": 21,
+    "texto": "Cita en dos semanas a las 12:00",
+    "resultado_modelo": {
+      "titulo": "Cita",
+      "fecha": "2026-09-15",
+      "hora_inicio": "12:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 18.96,
+    "json_valido": true
+  },
+  {
+    "id": 22,
+    "texto": "Dentista el próximo martes a las 16:30",
+    "resultado_modelo": {
+      "titulo": "Dentista",
+      "fecha": "2026-09-08",
+      "hora_inicio": "16:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 17.97,
+    "json_valido": true
+  },
+  {
+    "id": 23,
+    "texto": "Reunión de planificación el 15 de septiembre a las 11:30 por 1 hora con Ana y Pedro en la sala B-11",
+    "resultado_modelo": {
+      "titulo": "Reunión de planificación",
+      "fecha": "2026-09-15",
+      "hora_inicio": "11:30",
+      "duracion_minutos": 60,
+      "participantes": [
+        "Ana",
+        "Pedro"
+      ],
+      "ubicacion": "sala B-11",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 27.45,
+    "json_valido": true
+  },
+  {
+    "id": 24,
+    "texto": "Presentación de tesis el jueves 10 de septiembre a las 10:00, 2 horas, con el comité evaluador, en el auditorio, avísame 30 minutos antes",
+    "resultado_modelo": {
+      "titulo": "Presentación de tesis",
+      "fecha": "2026-09-10",
+      "hora_inicio": "10:00",
+      "duracion_minutos": 120,
+      "participantes": [
+        "comité evaluador"
+      ],
+      "ubicacion": "auditorio",
+      "recordatorio_minutos": 30,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 24.98,
+    "json_valido": true
+  },
+  {
+    "id": 25,
+    "texto": "Junta de sincronización el 8 de septiembre a las 9 con todo el equipo por videollamada, 45 minutos",
+    "resultado_modelo": {
+      "titulo": "Junta de sincronización",
+      "fecha": "2026-09-08",
+      "hora_inicio": "09:00",
+      "duracion_minutos": 45,
+      "participantes": [
+        "todo el equipo"
+      ],
+      "ubicacion": "videollamada",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 25.54,
+    "json_valido": true
+  },
+  {
+    "id": 26,
+    "texto": "Almuerzo de trabajo con los clientes el viernes 4 de septiembre a las 13:30 en el restaurante La Tabla por 1 hora y media",
+    "resultado_modelo": {
+      "titulo": "Almuerzo de trabajo",
+      "fecha": "2026-09-04",
+      "hora_inicio": "13:30",
+      "duracion_minutos": 90,
+      "participantes": [
+        "los clientes"
+      ],
+      "ubicacion": "restaurante La Tabla",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 29.72,
+    "json_valido": true
+  },
+  {
+    "id": 27,
+    "texto": "Workshop de IA el lunes 14 de septiembre de 9 a 12 en el salón 201",
+    "resultado_modelo": {
+      "titulo": "Workshop de IA",
+      "fecha": "2026-09-14",
+      "hora_inicio": "09:00",
+      "duracion_minutos": 180,
+      "participantes": [],
+      "ubicacion": "salón 201",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 35.38,
+    "json_valido": true
+  },
+  {
+    "id": 28,
+    "texto": "Entrevista técnica el 11 de septiembre a las 16:00 por Zoom con el equipo de RRHH, 1 hora, recordatorio 10 minutos antes",
+    "resultado_modelo": {
+      "titulo": "Entrevista técnica",
+      "fecha": "2026-09-11",
+      "hora_inicio": "16:00",
+      "duracion_minutos": 60,
+      "participantes": [
+        "equipo de RRHH"
+      ],
+      "ubicacion": "Zoom",
+      "recordatorio_minutos": 10,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 21.91,
+    "json_valido": true
+  },
+  {
+    "id": 29,
+    "texto": "Reunión de directorio el martes 8 de septiembre a las 18:30 en la oficina central, 2 horas, con los 5 directores",
+    "resultado_modelo": {
+      "titulo": "Reunión de directorio",
+      "fecha": "2026-09-08",
+      "hora_inicio": "18:30",
+      "duracion_minutos": 120,
+      "participantes": [
+        "los 5 directores"
+      ],
+      "ubicacion": "oficina central",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 24.98,
+    "json_valido": true
+  },
+  {
+    "id": 30,
+    "texto": "Reunión el 15 de septiembre",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-15",
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 14.87,
+    "json_valido": true
+  },
+  {
+    "id": 31,
+    "texto": "Llamada a las 14:30",
+    "resultado_modelo": {
+      "titulo": "Llamada",
+      "fecha": null,
+      "hora_inicio": "14:30",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 13.97,
+    "json_valido": true
+  },
+  {
+    "id": 32,
+    "texto": "Junta de emergencia",
+    "resultado_modelo": {
+      "titulo": "Junta de emergencia",
+      "fecha": null,
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 16.24,
+    "json_valido": true
+  },
+  {
+    "id": 33,
+    "texto": "Call with the client on Monday at 5pm",
+    "resultado_modelo": {
+      "titulo": "Call",
+      "fecha": "2026-09-07",
+      "hora_inicio": "17:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "client"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 18.77,
+    "json_valido": true
+  },
+  {
+    "id": 34,
+    "texto": "Reunión el 5 de septiembre a las 9 en horario de Madrid",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-05",
+      "hora_inicio": "09:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "Europe/Madrid",
+      "recurrence": null
+    },
+    "segundos": 18.3,
+    "json_valido": true
+  },
+  {
+    "id": 35,
+    "texto": "Reunión el 10/09 a las 10 pm",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-10",
+      "hora_inicio": "22:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 36,
+    "texto": "Reunión el lunes 7 de septiembre sin hora definida",
+    "resultado_modelo": {
+      "titulo": "Reunión",
+      "fecha": "2026-09-07",
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 17.9,
+    "json_valido": true
+  },
+  {
+    "id": 37,
+    "texto": "Junta virtual mañana",
+    "resultado_modelo": {
+      "titulo": "Junta",
+      "fecha": "2026-09-02",
+      "hora_inicio": null,
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": "virtual",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 18.93,
+    "json_valido": true
+  },
+  {
+    "id": 38,
+    "texto": "Oye, agéndame una junta con la Dani pasado mañana a las 4 en la sala B-11",
+    "resultado_modelo": {
+      "titulo": "junta",
+      "fecha": "2026-09-03",
+      "hora_inicio": "16:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "Dani"
+      ],
+      "ubicacion": "sala B-11",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 18.87,
+    "json_valido": true
+  },
+  {
+    "id": 39,
+    "texto": "agenda reunion mañana 10am porfa",
+    "resultado_modelo": {
+      "titulo": "reunion",
+      "fecha": "2026-09-02",
+      "hora_inicio": "10:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 21.35,
+    "json_valido": true
+  },
+  {
+    "id": 40,
+    "texto": "q onda, quedamos el viernes a las 7 en lo de siempre?",
+    "resultado_modelo": {
+      "titulo": "Quedada",
+      "fecha": "2026-09-04",
+      "hora_inicio": "19:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": "lo de siempre",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 20.46,
+    "json_valido": true
+  },
+  {
+    "id": 41,
+    "texto": "hey schedule a call with the team on Friday 3pm",
+    "resultado_modelo": {
+      "titulo": "call",
+      "fecha": "2026-09-04",
+      "hora_inicio": "15:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "team"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 22.19,
+    "json_valido": true
+  },
+  {
+    "id": 42,
+    "texto": "acuerdate que el lunes tenemos la presentación a las 9",
+    "resultado_modelo": {
+      "titulo": "presentación",
+      "fecha": "2026-09-07",
+      "hora_inicio": "09:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 22.85,
+    "json_valido": true
+  },
+  {
+    "id": 43,
+    "texto": "puedes agendar la reunión de sincronización el 10 a las 14? avísame 15 min antes",
+    "resultado_modelo": {
+      "titulo": "reunión de sincronización",
+      "fecha": "2026-09-10",
+      "hora_inicio": "14:00",
+      "duracion_minutos": null,
+      "participantes": [],
+      "ubicacion": null,
+      "recordatorio_minutos": 15,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 0.0,
+    "json_valido": true
+  },
+  {
+    "id": 44,
+    "texto": "junta virtual mañana a las 5 con el profe",
+    "resultado_modelo": {
+      "titulo": "junta",
+      "fecha": "2026-09-02",
+      "hora_inicio": "17:00",
+      "duracion_minutos": null,
+      "participantes": [
+        "el profe"
+      ],
+      "ubicacion": "virtual",
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 22.07,
+    "json_valido": true
+  },
+  {
+    "id": 45,
+    "texto": "reunión con Dani el jueves a las 11, 1 hora",
+    "resultado_modelo": {
+      "titulo": "reunión",
+      "fecha": null,
+      "hora_inicio": "11:00",
+      "duracion_minutos": 60,
+      "participantes": [
+        "Dani"
+      ],
+      "ubicacion": null,
+      "recordatorio_minutos": null,
+      "zona_horaria": "America/Santiago",
+      "recurrence": null
+    },
+    "segundos": 19.19,
+    "json_valido": true
+  }
+]
